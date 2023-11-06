@@ -68,6 +68,20 @@ html, body {
     top: 35px;
 }
 
+.shopmenu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    right: 326px;
+    top: 35px;
+}
+
+.shopmenu a {
+    margin: 0 10px 0 10px;
+}
+
 .button {
     position: absolute;
     display: flex;
@@ -94,6 +108,40 @@ html, body {
     line-height: normal;
     padding: 10px;
     margin-right: 20px;
+}
+
+.account {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 24px;
+    left: 1231px;
+}
+
+.account p {
+    cursor: pointer;
+    position: absolute;
+    top: -8px;
+    right: -100px;
+    color: #8B4513;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.account img {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    left: 129px;
+    border-radius: 45px;
+    object-fit: cover;
 }
 
 .login:hover, .login:focus {
