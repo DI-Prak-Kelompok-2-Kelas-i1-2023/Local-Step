@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="assets/patrobascld_blackwhite.svg">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="{{asset('css/home.css')}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -16,8 +16,10 @@
 
 <body>
 
+  {{-- section1 --}}
   <div class="section1">
 
+    {{-- product contents --}}
     <div id="prod-1" class="desc">
       <h1>Patrobas Cloud
         Slip On Black White</h1>
@@ -40,16 +42,19 @@
       <h3>RP123.456</h3>
     </div>
 
+    {{-- add chart button --}}
     <div class="btn">
       <button class="add-chart">Add to chart</button>
     </div>
 
+    {{-- product image --}}
     <div class="product-img">
       <div class="circle">
         <img src="assets/patrobascld_blackwhite.svg">
       </div>
     </div>
 
+    {{-- selector --}}
     <div class="iconSelector">
       <div class="productIcon">
         <button class="icon" onclick="openProduct(event, 'prod-1')" id="defaultOpen">
@@ -73,15 +78,8 @@
       </div>
     </div>
   </div>
-<!-- 
-  <div class="section2">
 
-  </div>
-
-  <div class="section3">
-
-  </div>   -->
-
+  {{-- footer --}}
   <div class="footer">
     <div class="footLine"></div>
     <div class="footNav">
@@ -213,19 +211,14 @@
     </div>
   </div>
 
+  {{-- navbar --}}
   <div class="navbar">
     <div class="logo">
       <h2>Local Step</h2>
     </div>
-    <div class="shopmenu">
+    <div class="search">
       <a href="">
         <img src="assets/search_btn.svg">
-      </a>
-      <a href="">
-        <img src="assets/cart.svg">
-      </a>
-      <a href="">
-        <img src="assets/wishlist.svg">
       </a>
     </div>
     <div class="menu">
@@ -236,17 +229,17 @@
         Kategori
       </a>
     </div>
-    <div class="account">
-      <p>
-        Username1
-      </p>
-      <a class="img" href="">
-        <img src="assets/dummy.png">
+    <div class="button">
+      <a class="login" href="{{route('index')}}">
+        Masuk
+      </a>
+      <a class="register" href="">
+        Daftar
       </a>
     </div>
   </div>
 
-  <script src="home.js"></script>
+  <script src="{{asset('js/home.js')}}"></script>
   
 </body>
 

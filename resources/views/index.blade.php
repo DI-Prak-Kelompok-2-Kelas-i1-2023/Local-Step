@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <title>Homepage</title>
+  <title>Welcome</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="assets/patrobascld_blackwhite.svg">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="{{asset('css/index.css')}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -15,73 +15,60 @@
 </head>
 
 <body>
+  <div class="box">
 
-  <div class="section1">
-
-    <div id="prod-1" class="desc">
-      <h1>Patrobas Cloud
-        Slip On Black White</h1>
-      <p>Terinspirasi dari awan yang konon empuk dan lembut, Patrobas Cloud Slip On dirancang dengan kenyamanan</p>
-      <h3>RP299.900</h3>
-    </div>
-    <div id="prod-2" class="desc">
-      <h1>Product 2</h1>
-      <p>Sepatu mahal gajelas</p>
-      <h3>RP999.999</h3>
-    </div>
-    <div id="prod-3" class="desc">
-      <h1>Product 3</h1>
-      <p>Sepatu goceng</p>
-      <h3>RP5.000</h3>
-    </div>
-    <div id="prod-4" class="desc">
-      <h1>Product 4</h1>
-      <p>Sepatu harga istimewa</p>
-      <h3>RP123.456</h3>
+    {{-- left --}}
+    <div class="rectangle">
+      <h1>LOCAL
+        STEP</h1>
     </div>
 
-    <div class="btn">
-      <button class="add-chart">Add to chart</button>
+    {{-- right --}}
+    <div class="saly">
+      <img src="assets/saly.svg">
     </div>
-
-    <div class="product-img">
-      <div class="circle">
-        <img src="assets/patrobascld_blackwhite.svg">
+    
+    {{-- login --}}
+    <div class="login">
+      <div class="welcome">
+        <div class="greet">Welcome to Local Step!</div>
+        <p class="noacc">
+          <span>No Account ?<br /></span>
+          <a href="">Sign up</a>
+        </p>
       </div>
-    </div>
-
-    <div class="iconSelector">
-      <div class="productIcon">
-        <button class="icon" onclick="openProduct(event, 'prod-1')" id="defaultOpen">
-          <img src="assets/patrobascld_blackwhite.svg">
+      <h1>Masuk</h1>
+      <form action="{{route('home')}}">
+        @csrf
+        <div class="infield">
+          <label>Enter your email address</label>
+          <input type="email" placeholder="Email" id="Email" name="email"/>
+        </div>
+        <div class="infield">
+          <label>Enter your password</label>
+          <input type="password" placeholder="Password" id="Password" name="password"/>
+        </div>
+        <a href="#" class="forgot">Forgot Password</a>
+        <button>Masuk</button>
+      </form>
+      <div class="or">OR</div>
+      <div class="otherLogin">
+        <button class="google">
+          <img src="assets/google.svg">
+          <span>Sign in with Google</span>
         </button>
-      </div>
-      <div class="productIcon">
-        <button class="icon" onclick="openProduct(event, 'prod-2')">
-          <img src="assets/prod2.svg">
+        <button class="fb">
+          <img src="assets/fb.svg">
         </button>
-      </div>
-      <div class="productIcon">
-        <button class="icon" onclick="openProduct(event, 'prod-3')">
-          <img src="assets/prod3.svg">
-        </button>
-      </div>
-      <div class="productIcon">
-        <button class="icon" onclick="openProduct(event, 'prod-4')">
-          <img src="assets/prod4.svg">
+        <button class="apple">
+          <img src="assets/apple.svg">
         </button>
       </div>
     </div>
-  </div>
-
-  <div class="section2">
 
   </div>
 
-  <div class="section3">
-
-  </div>  
-
+  {{-- footer --}}
   <div class="footer">
     <div class="footLine"></div>
     <div class="footNav">
@@ -213,35 +200,6 @@
     </div>
   </div>
 
-  <div class="navbar">
-    <div class="logo">
-      <h2>Local Step</h2>
-    </div>
-    <div class="search">
-      <a href="">
-        <img src="assets/search_btn.svg">
-      </a>
-    </div>
-    <div class="menu">
-      <a href="">
-        Brand
-      </a>
-      <a href="">
-        Kategori
-      </a>
-    </div>
-    <div class="button">
-      <a class="login" href="index.html">
-        Masuk
-      </a>
-      <a class="register" href="">
-        Daftar
-      </a>
-    </div>
-  </div>
-
-  <script src="home.js"></script>
-  
 </body>
 
 </html>
