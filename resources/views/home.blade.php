@@ -81,7 +81,11 @@
 
   {{-- section2 --}}
   <div class="section2">
-
+    <div class="boxGroup">
+      <div class="box">
+        
+      </div>
+    </div>
   </div>
 
   {{-- section3 --}}
