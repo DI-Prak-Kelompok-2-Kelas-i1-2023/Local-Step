@@ -1,9 +1,6 @@
-html, body {
-    width: auto;
-    height: auto;
+*{
     margin: 0;
-    padding: 0;
-}
+  }
 
 /* Navbar start */
 .navbar {
@@ -34,6 +31,7 @@ html, body {
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
+    margin: 1.6rem 0;
 }
 
 .menu {
@@ -132,6 +130,7 @@ html, body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin: 1.4rem 0;
 }
 
 .account img {
@@ -624,3 +623,311 @@ ul {
 }
 
 /* Footer end */
+
+  
+h1{
+    font-family: "Roboto";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+h2{
+    font-family: "Roboto";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    }
+
+h3{
+    font-family: "Roboto";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+
+h4{
+    font-family: "Poppins";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+h5{
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+h6{
+    font-family: "Poppins";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+}
+
+p{
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+}
+
+.boxx{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    gap: 40px;
+    padding: 150px 100px 100px 100px;
+}
+
+.alamatbox {
+    background-color: #ffffff;
+    border: solid 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    width: 70%;
+  }
+
+  .option{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+
+  .line{
+    background-color: #dfe1e5;
+    height: 0.1rem;
+    width: 100%;
+  }
+  
+  .opsi{
+    display: flex;
+    flex-direction: row;
+    height: 180px;
+    justify-content: space-between;
+    
+  }
+  .opsi1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .identity{
+    align-items: baseline;
+    color: #000000;
+    display: flex;
+    font-family: Poppins, 'Source Sans Pro';
+    font-weight: 500;
+
+    white-space: nowrap;
+  }
+  
+  .alamat {
+    color: #000000;
+    display: flex;
+    font-family: 'Poppins', 'Source Sans Pro';
+    line-height: 1.5;
+  }
+
+  .tambah {
+    align-items: center;
+    background-color: #8b4513;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    display: flex;
+    font-family: 'Poppins', 'Source Sans Pro';
+    font-weight: 500;
+    height: 32px;
+    justify-content: center;
+    line-height: 1.5;
+    text-align: center;
+    width: 180px;
+  }
+  
+  .utama {
+    align-items: center;
+    border: solid 0.1rem #8b4513;
+    box-sizing: border-box;
+    color: #8b4513;
+    display: flex;
+    font-family: Poppins, 'Source Sans Pro';
+    font-weight: 400;
+    height: 32px;
+    justify-content: center;
+    line-height: 1.5;
+    white-space: nowrap;
+    width: 6.9rem;
+  }
+  .atur {
+    align-items: center;
+    border: solid 0.1rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    font-family: 'Poppins', 'Source Sans Pro';
+    height: 32px;
+    justify-content: center;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    width: 180px;
+  }
+  .ubah {
+    color: #2252ff;
+    display: flex;
+    font-family: Poppins, 'Source Sans Pro';
+    font-weight: 400;
+    height: 32px;
+    line-height: 1.5;
+    white-space: nowrap;
+    width: 4.3rem;
+  }
+  .hapus{
+    color: #2252ff;
+    display: flex;
+    font-family: Poppins, 'Source Sans Pro';
+    font-weight: 400;
+    height: 32px;
+    line-height: 1.5;
+    white-space: nowrap;
+    width: 5.2rem;
+  }
+
+  /* rawr kiri */
+  .navigasi {
+    align-items: center;
+    background-color: #ffffff;
+    border: solid 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 3.4rem 3.2rem 11.5rem 3.2rem;
+    width: 30%;
+  }
+    .profpic {
+      background-image: url('neg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      border-radius: 7.75rem;
+      flex-shrink: 0;
+      height: 100px;
+      margin: 0rem 4.6rem 1.3rem 4.5rem;
+      width: 100px ;
+    }
+    .nav-menu {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    /* Accordion */
+
+    .acc {
+        align-items: center;
+        color: #8b4513;
+        cursor: pointer;
+        display: flex;
+        flex-shrink: 0;
+        font-family: 'Poppins', 'Source Sans Pro';
+        font-weight: 500;
+        height: 30px;
+        justify-content: center;
+        line-height: 1.5;
+        white-space: nowrap;
+        width: 100%;
+
+      }
+      
+      #active {
+        align-items: center;
+        background-color: #fffacd;
+        color: #8b4513;
+        height: 30px;
+        width: 100%;
+      }
+      
+    .accordion {
+        background: #FFF;
+        align-items: center;
+        justify-content: center;
+        color: #8b4513;
+        font-weight: 500;
+        height: 30px;
+        cursor: pointer;
+        flex-shrink: 0;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    .accordion .accordion-content {
+        margin: 10px 0;
+        border-radius: 4px;
+        overflow: hidden;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accordion-content.open {
+        padding-bottom: 10px;
+    }
+
+    .accordion-content header {
+        display: flex;
+        min-height: 30px;
+        padding: 0 15px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+    }
+
+    .accordion-content.open header {
+        min-height: 35px;
+    }
+
+    .accordion-content header .title {
+        color: #8b4513;
+        font-weight: 500;
+        height: 30px;
+    }
+
+    .accordion-content .description {
+        height: 0;
+        padding: 0 15px;
+        transition: all 0.2s linear;
+    }
+
+    .accordion-content .description a{
+        height: 0;
+        color: #8b4513;
+        font-weight: 500;
+        height: 30px;
+        width: 100%;
+        padding: 0 15px;
+        transition: all 0.2s linear;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }

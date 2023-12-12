@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="assets/patrobascld_blackwhite.svg">
-  <link rel="stylesheet" href="{{asset('css/index.css')}}">
+  <link rel="stylesheet" href="{{asset('css/register.css')}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -33,39 +33,29 @@
       <div class="welcome">
         <div class="greet">Welcome to Local Step!</div>
         <p class="noacc">
-          <span>No Account ?<br /></span>
-          <a href="{{route('register')}}">Sign up</a>
+          <span>Have an Account ?<br /></span>
+          <a href="{{route('index')}}">Sign in</a>
         </p>
       </div>
-      <h1>Masuk</h1>
+      <h1>Daftar</h1>
       <form action="{{route('home')}}">
         @csrf
         <div class="infield">
           <label>Enter your username or email address</label>
           <input type="email" placeholder="Username or email address" id="Email" name="email"/>
         </div>
+        <div class="infield2">
+          <label class="label1" for="name">Name</label>
+          <input type="text" placeholder="Name" id="Name" name="name"/>
+          <label class="label2" for="contact">Contact Number</label>
+          <input type="number" placeholder="Contact Number" id="Contact" name="contact"/>
+        </div>
         <div class="infield">
           <label>Enter your password</label>
           <input type="password" placeholder="Password" id="Password" name="password"/>
         </div>
-        <a href="#" class="forgot">Forgot Password</a>
-        <button>Masuk</button>
+        <button>Daftar</button>
       </form>
-      <div class="or">OR</div>
-      <div class="otherLogin">
-        <button class="google">
-          <img src="assets/google.svg">
-          <span>Sign in with Google</span>
-        </button>
-        <button class="fb">
-          <img src="assets/fb.svg">
-        </button>
-        <button class="apple">
-          <a href="{{route('home_in')}}">
-            <img src="assets/apple.svg">
-          </a>
-        </button>
-      </div>
     </div>
 
   </div>

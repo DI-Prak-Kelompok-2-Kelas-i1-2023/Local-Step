@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="assets/patrobascld_blackwhite.svg">
-  <link rel="stylesheet" href="{{asset('css/home.css')}}">
+  <link rel="stylesheet" href="{{asset('css/alamat.css')}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -17,134 +17,87 @@
 <body>
 
   {{-- section1 --}}
-  <div class="section1">
+  <div class="boxx">
+        <div class="navigasi">
+            <img class="profpic" src="assets/dummy.png"/>
+            <h3>Username11</h3>
+            <p>Edit Profile</p>
+            <div class="nav-menu">
+                <div class="accord">
+                    <div class="accordion">
+                        <div class="accordion-content">
+                            <header>
+                                <span class="title">Akun Saya</span>
+                            </header>
+                            <p class="description">
+                                <a class="acc" href="{{route('profile_data')}}">Profil</a>
+                                <a class="acc" id="active" href="">Alamat</a>
+                            </p>
+                        </div>
 
-    {{-- product contents --}}
-    <div id="prod-1" class="desc">
-      <h1>Patrobas Cloud
-        Slip On Black White</h1>
-      <p>Terinspirasi dari awan yang konon empuk dan lembut, Patrobas Cloud Slip On dirancang dengan kenyamanan</p>
-      <h3>RP299.900</h3>
-    </div>
-    <div id="prod-2" class="desc">
-      <h1>Product 2</h1>
-      <p>Sepatu mahal gajelas</p>
-      <h3>RP999.999</h3>
-    </div>
-    <div id="prod-3" class="desc">
-      <h1>Product 3</h1>
-      <p>Sepatu goceng</p>
-      <h3>RP5.000</h3>
-    </div>
-    <div id="prod-4" class="desc">
-      <h1>Product 4</h1>
-      <p>Sepatu harga istimewa</p>
-      <h3>RP123.456</h3>
-    </div>
+                        <span class="title">Pesanan Saya</span>
 
-    {{-- add chart button --}}
-    <div class="btn">
-      <button class="add-chart">Add to chart</button>
-    </div>
 
-    {{-- product image --}}
-    <div class="product-img">
-      <div class="circle">
-        <img src="assets/patrobascld_blackwhite.svg">
-      </div>
-    </div>
+                    </div>
+                </div>
 
-    {{-- selector --}}
-    <div class="iconSelector">
-      <div class="productIcon">
-        <button class="icon" onclick="openProduct(event, 'prod-1')" id="defaultOpen">
-          <img src="assets/patrobascld_blackwhite.svg">
-        </button>
-      </div>
-      <div class="productIcon">
-        <button class="icon" onclick="openProduct(event, 'prod-2')">
-          <img src="assets/prod2.svg">
-        </button>
-      </div>
-      <div class="productIcon">
-        <button class="icon" onclick="openProduct(event, 'prod-3')">
-          <img src="assets/prod3.svg">
-        </button>
-      </div>
-      <div class="productIcon">
-        <button class="icon" onclick="openProduct(event, 'prod-4')">
-          <img src="assets/prod4.svg">
-        </button>
-      </div>
-    </div>
-  </div>
+            </div>
+        </div>
+        <div class="alamatbox">
+            <div class="opsi1">
+                <div class="option">
+                    <h3>Alamat Saya</h3>
+                    <p>Kelola informasi alamat - alamat Anda</p>
+                </div>
+                <div class="option">
+                    <div class="tambah">+ Tambah Alamat</div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="opsi">
+                <div class="option">
+                    <div class="identity">
+                        <h4>Name111 </h4>
+                        <h4>(+62)8123456789</h4>
+                    </div>
+                    <p class="alamat">
+                        Jl. Mulyorejo Selatan II, No. 2, Surabaya
+                        <br />
+                        MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112
+                    </p>
+                    <div class="utama">Utama</div>
+                </div>
+                <div class="option">
+                    <div class="ubah">Ubah</div>
+                </div>
+            </div>
+            <div class="line"></div>
 
-  {{-- section2 --}}
-  <div class="section2">
-    <h3>Semua barang baru</h3>
-    <div class="group">
-      <div class="produk-pilihan">
-        <div class="rectangle">
-          <img src="assets/aerost_osaka.svg" />
-        </div>
-        <div class="frame">
-          <div class="title">Aerostreet Osaka Krem Biru Hitam</div>
-          <div class="prod-desc">
-            <div class="price">Rp149.900</div>
-            <img class="star" src="assets/star.svg" />
-            <div class="rating">4.7</div>
-          </div>
-        </div>
-      </div>
-      <div class="produk-pilihan">
-        <div class="rectangle">
-          <img src="assets/aerost_hoops.svg" />
-        </div>
-        <div class="frame">
-          <div class="title">Aerostreet Hoops Low Merah Hitam</div>
-          <div class="prod-desc">
-            <div class="price">Rp149.900</div>
-            <img class="star" src="assets/star.svg" />
-            <div class="rating">4.7</div>
-          </div>
-        </div>
-      </div>
-      <div class="produk-pilihan">
-        <div class="rectangle">
-          <img src="assets/bucch_faustus.svg" />
-        </div>
-        <div class="frame">
-          <div class="title">Buccheri Faustus Sneakers</div>
-          <div class="prod-desc">
-            <div class="price">Rp769.900</div>
-            <img class="star" src="assets/star.svg" />
-            <div class="rating">4.7</div>
-          </div>
-        </div>
-      </div>
-      <div class="produk-pilihan">
-        <div class="rectangle">
-          <img src="assets/sepatu_sklh.svg" />
-        </div>
-        <div class="frame">
-          <div class="title">Sepatu Sekolah Bata</div>
-          <div class="prod-desc">
-            <div class="price">Rp249.900</div>
-            <img class="star" src="assets/star.svg" />
-            <div class="rating">4.7</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a class="show" href="#">
-      <div class="showtext">Semua barang baru</div>
-      <img class="next" src="assets/next1.svg" />
-    </a>
-  </div>
+            <div class="opsi">
+                <div class="option">
+                    <div class="identity">
+                        <h4>Name111 </h4>
+                        <h4>(+62)8123456789</h4>
+                    </div>
+                    <p class="alamat">
+                        Jl. Mulyorejo Selatan II, No. 2, Surabaya
+                        <br />
+                        MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112
+                    </p>
+                </div>
+                <div class="option">
+                    <div class="identity">
+                        <div class="ubah">Ubah</div>
+                        <div class="hapus">Hapus</div>
+                    </div>
+                    <div class="atur">Atur sebagai utama</div>
+                </div>
+            </div>
+            <div class="line"></div>
 
-  {{-- section3 --}}
-  <div class="section3">
-  </div>  
+
+        </div>
+    </div>
 
   {{-- footer --}}
   <div class="footer">
@@ -284,7 +237,7 @@
       <h2>Local Step</h2>
     </div>
     <div class="shopmenu">
-      <a href="{{route('search')}}">
+      <a href="">
         <img src="assets/search_btn.svg">
       </a>
       <a href="{{route('wishlist')}}">
@@ -306,13 +259,44 @@
       <p>
         Username1
       </p>
-      <a class="img" href="{{route('profile_data')}}">
+      <a class="img" href="">
         <img src="assets/dummy.png">
       </a>
     </div>
   </div>
 
-  <script src="{{asset('js/home.js')}}"></script>
+  <script>
+    const accordionContent = document.querySelectorAll(".accordion-content");
+
+    accordionContent.forEach((item, index) => {
+        let header = item.querySelector("header");
+        header.addEventListener("click", () => {
+            item.classList.toggle("open");
+
+            let description = item.querySelector(".description");
+            if (item.classList.contains("open")) {
+                description.style.height = `${description.scrollHeight}px`; //scrollHeight property returns the height of an element including padding , but excluding borders, scrollbar or margin
+                item.querySelector("i").classList.replace("fa-plus", "fa-minus");
+            } else {
+                description.style.height = "0px";
+                item.querySelector("i").classList.replace("fa-minus", "fa-plus");
+            }
+            removeOpen(index); //calling the funtion and also passing the index number of the clicked header
+        })
+    })
+
+    function removeOpen(index1) {
+        accordionContent.forEach((item2, index2) => {
+            if (index1 != index2) {
+                item2.classList.remove("open");
+
+                let des = item2.querySelector(".description");
+                des.style.height = "0px";
+                item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
+            }
+        })
+    }
+</script>
   
 </body>
 

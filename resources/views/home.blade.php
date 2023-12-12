@@ -81,16 +81,69 @@
 
   {{-- section2 --}}
   <div class="section2">
-    <div class="boxGroup">
-      <div class="box">
-        
+    <h3>Semua barang baru</h3>
+    <div class="group">
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="prod-desc">
+            <div class="price">Rp149.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/aerost_hoops.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Aerostreet Hoops Low Merah Hitam</div>
+          <div class="prod-desc">
+            <div class="price">Rp149.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/bucch_faustus.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Buccheri Faustus Sneakers</div>
+          <div class="prod-desc">
+            <div class="price">Rp769.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/sepatu_sklh.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Sepatu Sekolah Bata</div>
+          <div class="prod-desc">
+            <div class="price">Rp249.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
       </div>
     </div>
+    <a class="show" href="#">
+      <div class="showtext">Semua barang baru</div>
+      <img class="next" src="assets/next1.svg" />
+    </a>
   </div>
 
   {{-- section3 --}}
   <div class="section3">
-
   </div>  
 
   {{-- footer --}}

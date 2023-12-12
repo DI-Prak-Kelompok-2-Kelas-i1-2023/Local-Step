@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <title>Welcome</title>
+  <title>Homepage</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="assets/patrobascld_blackwhite.svg">
-  <link rel="stylesheet" href="{{asset('css/index.css')}}">
+  <link rel="stylesheet" href="{{asset('css/profile.css')}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -15,60 +15,58 @@
 </head>
 
 <body>
-  <div class="box">
 
-    {{-- left --}}
-    <div class="rectangle">
-      <h1>LOCAL
-        STEP</h1>
-    </div>
+  {{-- section1 --}}
+    <div class="boxx">
+        <div class="navigasi">
+            <img class="profpic" src="assets/dummy.png"/>
+            <h3>Username11</h3>
+            <p>Edit Profile</p>
+            <div class="nav-menu">
+                <div class="accord">
+                    <div class="accordion">
+                        <div class="accordion-content">
+                            <header>
+                                <span class="title">Akun Saya</span>
+                            </header>
+                            <p class="description">
+                                <a class="acc" id="active" href="">Profil</a>
+                                <a class="acc" href="{{route('profile_alamat')}}">Alamat</a>
+                            </p>
+                        </div>
 
-    {{-- right --}}
-    <div class="saly">
-      <img src="assets/saly.svg">
-    </div>
-    
-    {{-- login --}}
-    <div class="login">
-      <div class="welcome">
-        <div class="greet">Welcome to Local Step!</div>
-        <p class="noacc">
-          <span>No Account ?<br /></span>
-          <a href="{{route('register')}}">Sign up</a>
-        </p>
-      </div>
-      <h1>Masuk</h1>
-      <form action="{{route('home')}}">
-        @csrf
-        <div class="infield">
-          <label>Enter your username or email address</label>
-          <input type="email" placeholder="Username or email address" id="Email" name="email"/>
+                        <span class="title">Pesanan Saya</span>
+
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="infield">
-          <label>Enter your password</label>
-          <input type="password" placeholder="Password" id="Password" name="password"/>
-        </div>
-        <a href="#" class="forgot">Forgot Password</a>
-        <button>Masuk</button>
-      </form>
-      <div class="or">OR</div>
-      <div class="otherLogin">
-        <button class="google">
-          <img src="assets/google.svg">
-          <span>Sign in with Google</span>
-        </button>
-        <button class="fb">
-          <img src="assets/fb.svg">
-        </button>
-        <button class="apple">
-          <a href="{{route('home_in')}}">
-            <img src="assets/apple.svg">
-          </a>
-        </button>
-      </div>
-    </div>
+        <div class="databox">
+            <div class="opsi1">
+                <div class="option">
+                    <h3>Profil saya</h3>
+                    <p>Kelola informasi profil Anda untuk mengontrol, melindungi, dan mengamankan akun</p>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="option">
+                <h4>Username</h4>
+                <h4>Nama</h4>
+                <h4>Email</h4>
+                <h4>Nomor Telepon</h4>
+                <h4>Jenis Kelamin</h4>
+            </div>
+            <div class="change">
+                <img class="profpic" src="assets/dummy.png"/>
+                <div class="pilih">
+                    <p>Pilih Gambar</p>
+                </div>
+            </div>
 
-  </div>
+        </div>
+    </div>
 
   {{-- footer --}}
   <div class="footer">
@@ -202,6 +200,73 @@
     </div>
   </div>
 
+  {{-- navbar --}}
+  <div class="navbar">
+    <div class="logo">
+      <h2>Local Step</h2>
+    </div>
+    <div class="shopmenu">
+      <a href="">
+        <img src="assets/search_btn.svg">
+      </a>
+      <a href="{{route('wishlist')}}">
+        <img src="assets/cart.svg">
+      </a>
+      <a href="">
+        <img src="assets/wishlist.svg">
+      </a>
+    </div>
+    <div class="menu">
+      <a href="">
+        Brand
+      </a>
+      <a href="">
+        Kategori
+      </a>
+    </div>
+    <div class="account">
+      <p>
+        Username1
+      </p>
+      <a class="img" href="">
+        <img src="assets/dummy.png">
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const accordionContent = document.querySelectorAll(".accordion-content");
+
+    accordionContent.forEach((item, index) => {
+        let header = item.querySelector("header");
+        header.addEventListener("click", () => {
+            item.classList.toggle("open");
+
+            let description = item.querySelector(".description");
+            if (item.classList.contains("open")) {
+                description.style.height = `${description.scrollHeight}px`; //scrollHeight property returns the height of an element including padding , but excluding borders, scrollbar or margin
+                item.querySelector("i").classList.replace("fa-plus", "fa-minus");
+            } else {
+                description.style.height = "0px";
+                item.querySelector("i").classList.replace("fa-minus", "fa-plus");
+            }
+            removeOpen(index); //calling the funtion and also passing the index number of the clicked header
+        })
+    })
+
+    function removeOpen(index1) {
+        accordionContent.forEach((item2, index2) => {
+            if (index1 != index2) {
+                item2.classList.remove("open");
+
+                let des = item2.querySelector(".description");
+                des.style.height = "0px";
+                item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
+            }
+        })
+    }
+</script>
+  
 </body>
 
 </html>

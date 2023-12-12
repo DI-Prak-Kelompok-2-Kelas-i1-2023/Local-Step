@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <title>Welcome</title>
+  <title>Wishlist</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="assets/patrobascld_blackwhite.svg">
-  <link rel="stylesheet" href="{{asset('css/index.css')}}">
+  <link rel="stylesheet" href="{{asset('css/home.css')}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -15,59 +15,13 @@
 </head>
 
 <body>
-  <div class="box">
 
-    {{-- left --}}
-    <div class="rectangle">
-      <h1>LOCAL
-        STEP</h1>
+  {{-- section1 --}}
+  <div class="section1">
+    <div class="searchbar">
+      <input class="search" placeholder="Search for a product" type="text"/>
+      <img src="assets/search_btn.svg"/>
     </div>
-
-    {{-- right --}}
-    <div class="saly">
-      <img src="assets/saly.svg">
-    </div>
-    
-    {{-- login --}}
-    <div class="login">
-      <div class="welcome">
-        <div class="greet">Welcome to Local Step!</div>
-        <p class="noacc">
-          <span>No Account ?<br /></span>
-          <a href="{{route('register')}}">Sign up</a>
-        </p>
-      </div>
-      <h1>Masuk</h1>
-      <form action="{{route('home')}}">
-        @csrf
-        <div class="infield">
-          <label>Enter your username or email address</label>
-          <input type="email" placeholder="Username or email address" id="Email" name="email"/>
-        </div>
-        <div class="infield">
-          <label>Enter your password</label>
-          <input type="password" placeholder="Password" id="Password" name="password"/>
-        </div>
-        <a href="#" class="forgot">Forgot Password</a>
-        <button>Masuk</button>
-      </form>
-      <div class="or">OR</div>
-      <div class="otherLogin">
-        <button class="google">
-          <img src="assets/google.svg">
-          <span>Sign in with Google</span>
-        </button>
-        <button class="fb">
-          <img src="assets/fb.svg">
-        </button>
-        <button class="apple">
-          <a href="{{route('home_in')}}">
-            <img src="assets/apple.svg">
-          </a>
-        </button>
-      </div>
-    </div>
-
   </div>
 
   {{-- footer --}}
@@ -202,6 +156,42 @@
     </div>
   </div>
 
+  {{-- navbar --}}
+  <div class="navbar">
+    <div class="logo">
+      <h2>Local Step</h2>
+    </div>
+    <div class="shopmenu">
+      <a href="">
+        <img src="assets/search_btn.svg">
+      </a>
+      <a href="{{route('wishlist')}}">
+        <img src="assets/cart.svg">
+      </a>
+      <a href="">
+        <img src="assets/wishlist.svg">
+      </a>
+    </div>
+    <div class="menu">
+      <a href="">
+        Brand
+      </a>
+      <a href="">
+        Kategori
+      </a>
+    </div>
+    <div class="account">
+      <p>
+        Username1
+      </p>
+      <a class="img" href="">
+        <img src="assets/dummy.png">
+      </a>
+    </div>
+  </div>
+
+  <script src="{{asset('js/home.js')}}"></script>
+  
 </body>
 
 </html>
