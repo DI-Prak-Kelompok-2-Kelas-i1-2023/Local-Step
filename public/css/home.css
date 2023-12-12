@@ -468,9 +468,111 @@ html, body {
 /* Section3 start */
 
 .section3 {
-    height: 646px;
+    height: 1200px;
     padding: 0 0 0 0;
     margin: 0;
+}
+
+.sectitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+}
+
+.sectitle h2 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.sectitle p {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+}
+
+.secdesc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.secdesc .desc1 {
+    width: 600px;
+}
+
+.secdesc .desc1 h2 {
+    color: #8B4513;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.secdesc .desc1 p {
+    color: rgba(0, 0, 0, 0.65);
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+}
+
+.secdesc .desc2 {
+    width: 600px;
+}
+
+.secdesc .desc2 h2 {
+    color: #8B4513;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.secdesc .desc2 p {
+    color: rgba(0, 0, 0, 0.65);
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+}
+
+.promotion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0 1em 0;
+}
+
+.quotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 2em 0 2em 0;
 }
 
 /* Section3 end */
