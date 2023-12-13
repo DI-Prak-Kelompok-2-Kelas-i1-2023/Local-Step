@@ -87,14 +87,14 @@
                             <p>Cek kembali ukuranmu dengan melihat deskripsi!</p>
                         </div>
                         <div class="size">
-                            <button class="button-size">37</button>
-                            <button class="button-size">38</button>
-                            <button class="button-size">39</button>
-                            <button class="button-size">40</button>
-                            <button class="button-size">41</button>
-                            <button class="button-size">42</button>
-                            <button class="button-size">43</button>
-                            <button class="button-size">44</button>
+                            <button class="button-size" onclick="changeColor(this)">37</button>
+                            <button class="button-size" onclick="changeColor(this)">38</button>
+                            <button class="button-size" onclick="changeColor(this)">39</button>
+                            <button class="button-size" onclick="changeColor(this)">40</button>
+                            <button class="button-size" onclick="changeColor(this)">41</button>
+                            <button class="button-size" onclick="changeColor(this)">42</button>
+                            <button class="button-size" onclick="changeColor(this)">43</button>
+                            <button class="button-size" onclick="changeColor(this)">44</button>
                         </div>
                     </div>
                     <div class="tokowrap">
@@ -178,111 +178,108 @@
             </div>
         </div>
 
-        <div class="Rate">
-            <div class="rate-box">
-                <p class="dari-5-HWu">
-                    <span class="dari-5-HWu-sub-0">4.7 </span>
-                    <span class="dari-5-HWu-sub-1">dari</span>
-                    <span class="dari-5-HWu-sub-2"> 5</span>
-                </p>
-                <div class="rawr">
-                    <img class="star-1-agM" src="assets/saly.svg" />
-                    <img class="star-3-uyX" src="assets/saly.svg" />
-                    <img class="star-2-FXb" src="assets/saly.svg" />
-                    <img class="star-4-P81" src="assets/saly.svg" />
-                    <img class="star-5-KXT" src="assets/saly.svg" />
+        <div class="ratebox">
+            <div class="Rate">
+                <div class="rate-box">
+                    <div class="nilairate">
+                        <h3>4.7</h3>
+                        <h3><span>dari</span></h3>
+                        <H3>5</H3>
+                    </div>
+                    <div class="rawr">
+                        <img class="star-1-agM" src="assets/saly.svg" />
+                        <img class="star-3-uyX" src="assets/saly.svg" />
+                        <img class="star-2-FXb" src="assets/saly.svg" />
+                        <img class="star-4-P81" src="assets/saly.svg" />
+                        <img class="star-5-KXT" src="assets/saly.svg" />
+                    </div>
+                </div>
+                <div class="rate-menu">
+                    <div class="menu1">
+                        <div class="ratebtn1" onclick="changeColors(this)">Semua</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">5 Bintang</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">4 Bintang</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">3 Bintang</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">2 Bintang</div>
+
+                        <div class="ratebtn1" onclick="changeColors(this)">1 Bintang</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">Dengan Komentar</div>
+                        <div class="ratebtn1 clicked" onclick="changeColors(this)">Dengan Media</div>
+                    </div>
                 </div>
             </div>
-            <div class="rate-menu">
-                <div class="menu1">
-                    <div class="ratebtn1">Semua</div>
-                    <div class="ratebtn1">5 Bintang </div>
-                    <div class="ratebtn1">4 Bintang</div>
-                    <div class="ratebtn1">3 Bintang</div>
-                    <div class="ratebtn1">2 Bintang</div>
-                </div>
-                <div class="menu2">
-                    <div class="ratebtn1">1 Bintang</div>
-                    <div class="ratebtn1">Dengan Komentar</div>
-                    <div class="ratebtn2">Dengan Media</div>
-                </div>
-            </div>
-        </div>
 
-        <div class="review">
-            <div class="review-prof"></div>
-            <div class="reviewdescz">
-                <p>Username</p>
-                <div class="group-2656-4o7">
-                    <img class="star-6-Qc5" src="assets/saly.svg" />
-                    <img class="star-8-A5T" src="assets/saly.svg" />
-                    <img class="star-7-V7j" src="assets/saly.svg" />
-                    <img class="star-9-1rm" src="assets/saly.svg" />
-                    <img class="star-10-yHo" src="assets/saly.svg" />
-                </div>
-                <p class="compass-gazelle-blue-sky-WoX">2023-09-30 | Compass Gazelle, Blue Sky</p>
-                <p
-                    class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-maecenas-in-magna-sed-lorem-dignissim-posuere-nulla-pulvinar-efficitur-mi-vel-interdum-ligula-feugiat-dictum-cras-volutpat-luctus-felis-ut-ullamcorper-qL1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <div class="review">
+                <div class="review-prof"></div>
+                <div class="reviewdesc">
+                    <p>Username</p>
+                    <div class="starreview">
+                        <img class="star" src="assets/saly.svg" />
+                        <img class="star" src="assets/saly.svg" />
+                        <img class="star" src="assets/saly.svg" />
+                        <img class="star" src="assets/saly.svg" />
+                        <img class="star" src="assets/saly.svg" />
+                    </div>
+                    <p>2023-09-30 | Compass Gazelle, Blue Sky</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-                    <br />
-                    Maecenas in magna sed lorem dignissim posuere. Nulla pulvinar efficitur mi,
+                        <br />
+                        Maecenas in magna sed lorem dignissim posuere. Nulla pulvinar efficitur mi,
 
-                    <br />
-                    vel interdum ligula feugiat dictum. Cras volutpat luctus felis ut ullamcorper.
+                        <br />
+                        vel interdum ligula feugiat dictum. Cras volutpat luctus felis ut ullamcorper.
 
-                </p>
-                <div class="group-2657-2QV">
-                    <img class="rectangle-252-k5b" src="assets/saly.svg" />
-                    <img class="rectangle-253-UnH" src="assets/saly.svg" />
-                    <img class="rectangle-254-Djs" src="assets/saly.svg" />
+                    </p>
+                    <div class="photodetail">
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="review">
+                <div class="review-prof"></div>
+                <div class="reviewdesc">
+                    <p>Username</p>
+                    <div class="starreview">
+                        <img class="star" src="assets/saly.svg" />
+                        <img class="star" src="assets/saly.svg" />
+                        <img class="star" src="assets/saly.svg" />
+                        <img class="star" src="assets/saly.svg" />
+                        <img class="star" src="assets/saly.svg" />
+                    </div>
+                    <p>2023-09-30 | Compass Gazelle, Blue Sky</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-        <div class="review">
-            <div class="review-prof"></div>
-            <div class="frame-10-BzD">
-                <p class="username-jVw">Username</p>
-                <div class="group-2656-4o7">
-                    <img class="star-6-Qc5" src="assets/saly.svg" />
-                    <img class="star-8-A5T" src="assets/saly.svg" />
-                    <img class="star-7-V7j" src="assets/saly.svg" />
-                    <img class="star-9-1rm" src="assets/saly.svg" />
-                    <img class="star-10-yHo" src="assets/saly.svg" />
-                </div>
-                <p class="compass-gazelle-blue-sky-WoX">2023-09-30 | Compass Gazelle, Blue Sky</p>
-                <p
-                    class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-maecenas-in-magna-sed-lorem-dignissim-posuere-nulla-pulvinar-efficitur-mi-vel-interdum-ligula-feugiat-dictum-cras-volutpat-luctus-felis-ut-ullamcorper-qL1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <br />
+                        Maecenas in magna sed lorem dignissim posuere. Nulla pulvinar efficitur mi,
 
-                    <br />
-                    Maecenas in magna sed lorem dignissim posuere. Nulla pulvinar efficitur mi,
+                        <br />
+                        vel interdum ligula feugiat dictum. Cras volutpat luctus felis ut ullamcorper.
 
-                    <br />
-                    vel interdum ligula feugiat dictum. Cras volutpat luctus felis ut ullamcorper.
-
-                </p>
-                <div class="group-2657-2QV">
-                    <img class="rectangle-252-k5b" src="assets/saly.svg" />
-                    <img class="rectangle-253-UnH" src="assets/saly.svg" />
-                    <img class="rectangle-254-Djs" src="assets/saly.svg" />
+                    </p>
+                    <div class="photodetail">
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="group-2669-Tty">
-            <img class="vector-jbb" src="assets/saly.svg" />
-            <div class="auto-group-saud-fEM">
-                <div class="rectangle-241-CEH"></div>
-                <p class="item-1-8td">1</p>
+            <div class="pagination">
+                <img class="arrow" src="assets/aerost_osaka.svg" />
+                <div class="page-active">
+                    <p>1</p>
+                </div>
+                <p class="page">2</p>
+                <p class="page">3</p>
+                <p class="page">4</p>
+                <p class="page">5</p>
+                <p class="page">...</p>
+                <img class="arrow" src="assets/aerost_osaka.svg" />
             </div>
-            <p class="item-2-1xR">2</p>
-            <p class="item-3-YBf">3</p>
-            <p class="item-4-g2y">4</p>
-            <p class="item-5-otH">5</p>
-            <p class="item--UDj">...</p>
-            <img class="vector-Bdw" src="assets/saly.svg" />
         </div>
     </div>
 
@@ -419,7 +416,9 @@
         </div>
     </div>
 
-    <script> const imgs = document.querySelectorAll('.img-select a');
+    
+    <script>
+        const imgs = document.querySelectorAll('.img-select a');
         const imgBtns = [...imgs];
         let imgId = 1;
 
@@ -437,7 +436,34 @@
             document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
         }
 
-        window.addEventListener('resize', slideImage);</script>
+        window.addEventListener('resize', slideImage);
+
+    </script>
+
+    <script>
+        function changeColor(button) {
+            // Remove the 'clicked' class from all buttons
+            document.querySelectorAll('.button-size').forEach(function (btn) {
+                btn.classList.remove('clicked');
+            });
+
+            // Add the 'clicked' class to the clicked button
+            button.classList.add('clicked');
+        }
+    </script>
+
+    <script>
+        function changeColors(button) {
+            const menuButtons = button.parentNode.querySelectorAll('.ratebtn1');
+            menuButtons.forEach(function (btn) {
+                btn.classList.remove('clicked');
+            });
+
+            // Add the 'clicked' class to the clicked button
+            button.classList.add('clicked');
+        }
+    </script>
+
 </body>
 
 </html>

@@ -48,3 +48,7 @@ Route::get('/register', function () {
 Route::get('/search', function () {
     return view('search');
 })->name('search');
+
+Route::get('/brand', function () {
+    return view('brand');
+})->name('brand');
