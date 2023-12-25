@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+    
 </head>
 
 <body>
@@ -178,8 +179,9 @@
             </div>
         </div>
 
+        <h3>PENILAIAN PRODUK</h3>
         <div class="ratebox">
-            <div class="Rate">
+            <div class="rate">
                 <div class="rate-box">
                     <div class="nilairate">
                         <h3>4.7</h3>
@@ -187,11 +189,11 @@
                         <H3>5</H3>
                     </div>
                     <div class="rawr">
-                        <img class="star-1-agM" src="assets/saly.svg" />
-                        <img class="star-3-uyX" src="assets/saly.svg" />
-                        <img class="star-2-FXb" src="assets/saly.svg" />
-                        <img class="star-4-P81" src="assets/saly.svg" />
-                        <img class="star-5-KXT" src="assets/saly.svg" />
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
                     </div>
                 </div>
                 <div class="rate-menu">
@@ -201,7 +203,6 @@
                         <div class="ratebtn1" onclick="changeColors(this)">4 Bintang</div>
                         <div class="ratebtn1" onclick="changeColors(this)">3 Bintang</div>
                         <div class="ratebtn1" onclick="changeColors(this)">2 Bintang</div>
-
                         <div class="ratebtn1" onclick="changeColors(this)">1 Bintang</div>
                         <div class="ratebtn1" onclick="changeColors(this)">Dengan Komentar</div>
                         <div class="ratebtn1 clicked" onclick="changeColors(this)">Dengan Media</div>
@@ -210,15 +211,15 @@
             </div>
 
             <div class="review">
-                <div class="review-prof"></div>
+                <img src="assets/dummy.png" class="review-prof">
                 <div class="reviewdesc">
                     <p>Username</p>
                     <div class="starreview">
-                        <img class="star" src="assets/saly.svg" />
-                        <img class="star" src="assets/saly.svg" />
-                        <img class="star" src="assets/saly.svg" />
-                        <img class="star" src="assets/saly.svg" />
-                        <img class="star" src="assets/saly.svg" />
+                        <i class="fas fa-star" class="star"></i>
+                        <i class="fas fa-star" class="star"></i>
+                        <i class="fas fa-star" class="star"></i>
+                        <i class="fas fa-star" class="star"></i>
+                        <i class="fas fa-star" class="star"></i>
                     </div>
                     <p>2023-09-30 | Compass Gazelle, Blue Sky</p>
                     <p>
@@ -239,15 +240,15 @@
                 </div>
             </div>
             <div class="review">
-                <div class="review-prof"></div>
+                <img src="assets/dummy.png" class="review-prof">
                 <div class="reviewdesc">
                     <p>Username</p>
                     <div class="starreview">
-                        <img class="star" src="assets/saly.svg" />
-                        <img class="star" src="assets/saly.svg" />
-                        <img class="star" src="assets/saly.svg" />
-                        <img class="star" src="assets/saly.svg" />
-                        <img class="star" src="assets/saly.svg" />
+                        <i class="fas fa-star" class="stars"></i>
+                        <i class="fas fa-star" class="stars"></i>
+                        <i class="fas fa-star" class="stars"></i>
+                        <i class="fas fa-star" class="stars"></i>
+                        <i class="fas fa-star" class="stars"></i>
                     </div>
                     <p>2023-09-30 | Compass Gazelle, Blue Sky</p>
                     <p>
@@ -281,9 +282,66 @@
                 <img class="arrow" src="assets/aerost_osaka.svg" />
             </div>
         </div>
+
+    <h3>REKOMENDASI UNTUK ANDA</h3>
+    <div class="group">
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="prod-desc">
+            <div class="price">Rp149.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/aerost_hoops.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Aerostreet Hoops Low Merah Hitam</div>
+          <div class="prod-desc">
+            <div class="price">Rp149.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/bucch_faustus.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Buccheri Faustus Sneakers</div>
+          <div class="prod-desc">
+            <div class="price">Rp769.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/sepatu_sklh.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Sepatu Sekolah Bata</div>
+          <div class="prod-desc">
+            <div class="price">Rp249.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    </div>
 
+    
 
     <div class="footer">
         <div class="footLine"></div>
@@ -463,6 +521,7 @@
             button.classList.add('clicked');
         }
     </script>
+    <script src="https://kit.fontawesome.com/f75625c80a.js" crossorigin="anonymous"></script>
 
 </body>
 

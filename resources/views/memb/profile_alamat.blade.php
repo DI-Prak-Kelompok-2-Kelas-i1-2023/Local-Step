@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="assets/patrobascld_blackwhite.svg">
-  <link rel="stylesheet" href="{{asset('css/profile.css')}}">
+  <link rel="stylesheet" href="{{asset('css/alamat.css')}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -17,7 +17,7 @@
 <body>
 
   {{-- section1 --}}
-    <div class="boxx">
+  <div class="boxx">
         <div class="navigasi">
             <img class="profpic" src="assets/dummy.png"/>
             <h3>Username11</h3>
@@ -30,8 +30,8 @@
                                 <span class="title">Akun Saya</span>
                             </header>
                             <p class="description">
-                                <a class="acc" id="active" href="">Profil</a>
-                                <a class="acc" href="{{route('profile_alamat')}}">Alamat</a>
+                                <a class="acc" href="{{route('profile_data')}}">Profil</a>
+                                <a class="acc" id="active" href="">Alamat</a>
                             </p>
                         </div>
 
@@ -43,27 +43,61 @@
 
             </div>
         </div>
-        <div class="databox">
+        <div class="alamatbox">
             <div class="opsi1">
                 <div class="option">
-                    <h3>Profil saya</h3>
-                    <p>Kelola informasi profil Anda untuk mengontrol, melindungi, dan mengamankan akun</p>
+                    <h3>Alamat Saya</h3>
+                    <p>Kelola informasi alamat - alamat Anda</p>
+                </div>
+                <div class="option">
+                    <div class="tambah">+ Tambah Alamat</div>
                 </div>
             </div>
             <div class="line"></div>
-            <div class="option">
-                <h4>Username</h4>
-                <h4>Nama</h4>
-                <h4>Email</h4>
-                <h4>Nomor Telepon</h4>
-                <h4>Jenis Kelamin</h4>
-            </div>
-            <div class="change">
-                <img class="profpic" src="assets/dummy.png"/>
-                <div class="pilih">
-                    <p>Pilih Gambar</p>
+            <div class="opsi">
+              <div class="option">
+                <div class="identity">
+                  <h4>Name111 |</h4>
+                  <h4>(+62)8123456789</h4>
                 </div>
+                <p class="alamat">
+                  Jl. Mulyorejo Selatan II, No. 2, Surabaya
+                  MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112
+                </p>
+                <div class="utama">Utama</div>
+              </div>
+              <div class="option">
+                <div class="change">
+                  <a href="" class="ubah">Ubah</a>
+                  <a href="" class="hapus-hidden">Hapus</a>
+                </div>
+                <a class="atur-hidden" onclick="toggleUtamaVisibility()">Atur sebagai utama</a>
+              </div>
             </div>
+            <div class="line"></div>
+
+            <div class="opsi">
+              <div class="option">
+                <div class="identity">
+                  <h4>Name111 |</h4>
+                  <h4>(+62)8123456789</h4>
+                </div>
+                <p class="alamat">
+                  Jl. Mulyorejo Selatan II, No. 2, Surabaya
+                  MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112
+                </p>
+                <div class="utama-hidden">Utama</div>
+              </div>
+              <div class="option">
+                <div class="change">
+                  <a href="" class="ubah">Ubah</a>
+                  <a href="" class="hapus">Hapus</a>
+                </div>
+                <a class="atur" onclick="toggleUtamaVisibility()">Atur sebagai utama</a>
+              </div>
+            </div>
+        
+          <div class="line"></div>    
 
         </div>
     </div>
@@ -201,7 +235,7 @@
   </div>
 
   {{-- navbar --}}
-  <div class="navbar">
+  <nav class="navbar">
     <div class="logo">
       <h2>Local Step</h2>
     </div>
@@ -217,7 +251,7 @@
       </a>
     </div>
     <div class="menu">
-      <a href="">
+      <a href="{{route('mbrand')}}">
         Brand
       </a>
       <a href="">
@@ -232,7 +266,7 @@
         <img src="assets/dummy.png">
       </a>
     </div>
-  </div>
+  </nav>
 
   <script>
     const accordionContent = document.querySelectorAll(".accordion-content");
@@ -265,6 +299,24 @@
             }
         })
     }
+</script>
+
+<script>
+ function toggleUtamaVisibility() {
+  // Get all "Utama" and "Hapus" elements in both sets
+  const utamaElements = document.querySelectorAll('.utama, .utama-hidden');
+  const hapusElements = document.querySelectorAll('.hapus, .hapus-hidden');
+
+  // Toggle visibility for "Utama" elements
+  utamaElements.forEach(element => {
+    element.classList.toggle('utama-hidden');
+  });
+
+  // Toggle visibility for "Hapus" elements
+  hapusElements.forEach(element => {
+    element.classList.toggle('hapus-hidden');
+  });
+}
 </script>
   
 </body>
