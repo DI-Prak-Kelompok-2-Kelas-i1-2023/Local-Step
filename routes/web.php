@@ -64,3 +64,10 @@ Route::get('/adress', function () {
     return view('memb/profile_alamat');
 })->name('profile_alamat');
 
+Route::get('/cart', function(){
+    return view('cart');
+})->name('cart');
+
+Route::Get('/checkout', function(){
+    return view('checkout');
+})->name('checkout');

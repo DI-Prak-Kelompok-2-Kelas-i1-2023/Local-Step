@@ -1,0 +1,43 @@
+.timer-container {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.hours,
+.minutes,
+.seconds {
+    display: flex;
+    gap: 6px;
+}
+
+.hour,
+.minute,
+.second {
+    border-radius: 10px;
+    background: #9db658;
+    color: #fff;
+    padding: 12px 22px;
+
+    /* h2 - title */
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.time-linker {
+    color: #fff;
+
+    /* h2 - title */
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
