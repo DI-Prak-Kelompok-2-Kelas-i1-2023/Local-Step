@@ -331,7 +331,7 @@
       <a class="login" href="{{route('index')}}">
         Masuk
       </a>
-      <a class="register" href="">
+      <a class="register" href="{{route('register')}}">
         Daftar
       </a>
     </div>

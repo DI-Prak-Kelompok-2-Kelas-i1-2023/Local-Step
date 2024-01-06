@@ -144,6 +144,37 @@
 
   {{-- section3 --}}
   <div class="section3">
+    <div class="sectitle">
+      <h2>Jejak Lokal, Gaya Global</h2>
+      <p>Tidak perlu mencari lagi, di sinilah Anda menemukan pasangan terbaik!</p>
+    </div>
+    <div class="secdesc">
+      <span class="desc1">
+        <h2>Local Step</h2>
+        <p>Local Step merupakan e-commerce yang menjual footwear (alas kaki) dari brand lokal di Indonesia. Tujuan utama dari  website local step adalah dapat memberikan pengalaman berbelanja alas kaki dari brand lokal secara online yang memuaskan bagi penggunanya.</p>
+      </span>
+      <span class="desc2">
+        <h2>Local Step</h2>
+        <p>Local Step merupakan e-commerce yang menjual footwear (alas kaki) dari brand lokal di Indonesia. Tujuan utama dari  website local step adalah dapat memberikan pengalaman berbelanja alas kaki dari brand lokal secara online yang memuaskan bagi penggunanya.</p>
+      </span>
+    </div>
+    <div class="promotion">
+      <img src="assets/halloween.png"/>
+    </div>
+    <div class="quotes">
+      <div>
+        <img src="assets/quoteimg1.svg"/>
+        <h4>Currated & unique collection</h4>
+      </div>
+      <div>
+        <img src="assets/original.svg"/>
+        <h4>100% Original lokal</h4>
+      </div>
+      <div>
+        <img src="assets/quoteimg2.svg"/>
+        <h4>Buy the latest & define the trends</h4>
+      </div>
+    </div>
   </div>  
 
   {{-- footer --}}

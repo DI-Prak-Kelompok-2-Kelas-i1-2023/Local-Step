@@ -310,6 +310,526 @@ html, body {
 
 /* Section1 end */
 
+/* Wishlist */
+
+.wish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 656px;
+    background: linear-gradient(90deg, #FDFBFB 0%, #EBEDEE 100%);
+    padding: 90px 0 0 0;
+    margin: 0;
+}
+
+.searchbar {
+    display: flex;
+    border-radius: 20px;
+    width: 700px;
+    height: 1em;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #00000033;
+    background-color: #fff;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin: 2em 0 1em 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.searchbar input {
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    width: 650px;
+    align-self: center;
+}
+
+.searchbar input::placeholder {
+    color: #8B4513;
+}
+
+.searchbar input:focus {
+    outline: none;
+    border: none;
+}
+
+.searchbar img {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    fill: #8B4513;
+    align-self: center;
+}
+
+.fav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1250px;
+}
+
+.fav p {
+    color: #8B4513;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.wishlist {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    margin: 2em 0 2em 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.rectangle_wish {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background-color: #0000000a;
+    border-radius: 15px;
+}
+
+.rectangle_wish img {
+    width: 180px;
+    height: 180px;
+}
+  
+.frame-wish {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 100px;
+    align-self: stretch;
+    position: relative;
+}
+  
+.title_wish {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    color: #000000;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 300px;
+}
+
+.price_wish {
+    position: relative;
+    flex: 1;
+    color: #000000a6;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+    width: 300px;
+}
+
+/* Wishlist end */
+
+/* Shop */
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(90deg, #FDFBFB 0%, #EBEDEE 100%);
+    padding: 90px 0 0 0;
+    margin: 0;
+}
+
+.shopprof {
+    display: flex;
+    flex-direction: column;
+    width: 1250px;
+    margin-top: 3em;
+}
+
+.shopprof .banner {
+    width: 1250px;
+    height: 250px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.shopprof .pp {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 38%;
+    left: 15%;
+    transform: translateX(-25%);
+    border-radius: 50%;
+    background: lightgray 50% / cover no-repeat;
+}
+
+.shopprof .menushop {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 0;
+    top: 150px;
+    text-align: center;
+    border-bottom: 2px #aaaaaa solid;
+    padding: 0;
+}
+
+.shopprof .menushop button {
+    margin: 0 20px 0 0;
+    padding: 5px 15px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    background: none;
+    transform: translateY(1px);
+    border-bottom: 2px transparent solid;
+}
+
+.menushop button a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.shopprof .menushop button:hover {
+    transform: translateY(1px);
+    border-bottom: 2px #262626 solid;
+}
+
+.menushop button a:hover {
+    color: #000;
+}
+
+.shopcontent {
+    display: flex;
+    position: relative;
+    margin-top: 10em;
+    flex-direction: column;
+}
+
+.shopcontent h3 {
+    margin: 3em 0 1em 0;
+    color: #262626;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.content1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 1250px;
+    height: 100%;
+    border-bottom: 2px #aaaaaa solid;
+    margin: 0 0 2em 0;
+}
+
+.prodchoice {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 387px;
+    align-items: center;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px #d0939340;
+    margin-bottom: 3em;
+}
+  
+.prodchoice .rectangle {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 268px;
+    background-color: #0000000a;
+}
+
+.prodchoice .rectangle img {
+    width: 170px;
+    height: 170px;
+}
+  
+.prodchoice .frame {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 100px;
+    align-self: stretch;
+    position: relative;
+}
+  
+.prodchoice .frame .title {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    color: #000000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+  
+.prodchoice .frame .prod-desc {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto
+}
+
+.prodchoice .frame .prod-desc .price {
+    position: relative;
+    flex: 1;
+    color: #000000a6;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+}
+  
+.prodchoice .frame .prod-desc .star {
+    position: relative;
+    width: 22px;
+    height: 22px;
+}
+  
+.prodchoice .frame .prod-desc .rating {
+    position: relative;
+    width: 26px;
+    color: rgba(0, 0, 0, 0.65);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+    width: 24px;
+}
+
+.content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 1250px;
+    height: 100%;
+    border-bottom: 2px #aaaaaa solid;
+    margin: 0 0 2em 0;
+}
+
+.abtshop {
+    display: flex;
+    border-radius: 15px;
+    background: #d6d6d6;
+    width: 1250px;
+    height: 100%;
+    margin-bottom: 2em;
+    flex-direction: column;
+}
+
+.abtshop p {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0 0 0 1.5em;
+    margin: 1em 0 0 0;
+}
+
+.abt {
+    display: flex;
+    flex-direction: row;
+}
+
+.abt img {
+    width: 560px;
+    height: 320px;
+    margin: 2em;
+}
+
+.abt span {
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 2em 2em 2em 0;
+}
+
+.abt span a {
+    text-decoration: none;
+    color: #000;
+}
+
+.content3 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 1250px;
+    height: 100%;
+    margin: 0 0 2em 0;
+}
+
+.showshopprod {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 8px;
+    background: #FF6347;
+    width: 400px;
+    padding: 0.5em 0;
+    border: none;
+    margin-bottom: 3em;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px #41414162;
+}
+
+.showshopprod:hover {
+    background: #ca2f14;
+}
+
+.shopproduct {
+    display: flex;
+    position: relative;
+    margin-top: 15em;
+    flex-direction: row;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 350px;
+    height: 100%;
+    margin: 0 0 2em 0;
+}
+
+.filtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filtitle img {
+    width: 25px;
+    height: 25px;
+}
+
+.filtitle h3 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.prodlist {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 900px;
+    height: 100%;
+    margin: 0 0 2em 0;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.pagination .active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Shop end */
+
 /* Section2 start */
 
 .section2 {
@@ -468,7 +988,7 @@ html, body {
 /* Section3 start */
 
 .section3 {
-    height: 1200px;
+    height: 100%;
     padding: 0 0 0 0;
     margin: 0;
 }
@@ -569,10 +1089,27 @@ html, body {
 
 .quotes {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     padding: 2em 0 2em 0;
+    width: 100%;
+}
+
+.quotes div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quotes h4 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 /* Section3 end */

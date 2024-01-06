@@ -16,11 +16,97 @@
 
 <body>
 
-  {{-- section1 --}}
-  <div class="section1">
+  {{-- content --}}
+  <div class="wish">
     <div class="searchbar">
-      <input class="search" placeholder="Search for a product" type="text"/>
+      <input class="srch" placeholder="Search for a product" type="text"/>
       <img src="assets/search_btn.svg"/>
+    </div>
+    <div class="fav">
+      <p>Favorit Saya</p>
+    </div>
+    <div class="wishlist">
+      <div class="item">
+        <div class="rectangle_wish">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame_wish">
+          <div class="title_wish">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="price_wish">Rp149.900</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="rectangle_wish">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame_wish">
+          <div class="title_wish">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="price_wish">Rp149.900</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="rectangle_wish">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame_wish">
+          <div class="title_wish">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="price_wish">Rp149.900</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="rectangle_wish">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame_wish">
+          <div class="title_wish">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="price_wish">Rp149.900</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="rectangle_wish">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame_wish">
+          <div class="title_wish">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="price_wish">Rp149.900</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="rectangle_wish">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame_wish">
+          <div class="title_wish">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="price_wish">Rp149.900</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="rectangle_wish">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame_wish">
+          <div class="title_wish">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="price_wish">Rp149.900</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="rectangle_wish">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame_wish">
+          <div class="title_wish">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="price_wish">Rp149.900</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="rectangle_wish">
+          <img src="assets/aerost_osaka.svg" />
+        </div>
+        <div class="frame_wish">
+          <div class="title_wish">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="price_wish">Rp149.900</div>
+        </div>
+      </div>
     </div>
   </div>
 

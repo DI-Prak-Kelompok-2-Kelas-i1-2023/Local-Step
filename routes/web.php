@@ -48,3 +48,11 @@ Route::get('/register', function () {
 Route::get('/search', function () {
     return view('search');
 })->name('search');
+
+Route::get('/shop_home', function () {
+    return view('shop');
+})->name('shop_home');
+
+Route::get('/shop_product', function () {
+    return view('shop_prod');
+})->name('shop_product');
