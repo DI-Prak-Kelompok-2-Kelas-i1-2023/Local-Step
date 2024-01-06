@@ -1,0 +1,43 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.checkbox label {
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the custom checkbox */
+.custom-checkbox {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #838383;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style the inner indicator when checkbox is checked */
+.custom-checkbox input:checked + .indicator {
+    background-color: #4caf50;
+}
+
+/* Style the indicator inside the custom checkbox */
+.custom-checkbox .indicator {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid #838383; */
+    transition: background-color 0.3s;
+}

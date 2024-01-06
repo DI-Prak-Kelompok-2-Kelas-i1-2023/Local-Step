@@ -3,60 +3,63 @@
   }
 
 /* Navbar start */
+
 .navbar {
-    width: 1511px;
+    width: 100%;
     height: 91px;
     flex-shrink: 0;
     position: fixed;
     left: 0;
     top: 0;
     background: #FFFACD;
-}
-
-.logo {
+    z-index: 1000;
+  }
+  
+  
+  .logo {
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     left: 108px;
-}
-
-.logo h2 {
+  }
+  
+  .logo h2 {
     color: #8B4513;
     text-align: center;
-    font-family: Roboto;
+    font-family: "Roboto";
     font-size: 36px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
     margin: 1.6rem 0;
-}
-
-.menu {
+  }
+  
+  .menu {
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    right: 983px;
+    left: 28%;
     top: 35px;
-}
-
-.menu a {
+  }
+  
+  .menu a {
     color: #8B4513;
     text-align: center;
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     padding: 0 15px 0 15px;
     text-decoration: none;
-}
-
-.search {
+  }
+  
+  .search {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -64,107 +67,106 @@
     align-items: center;
     right: 326px;
     top: 35px;
-}
-
-.shopmenu {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    right: 326px;
-    top: 35px;
-}
-
-.shopmenu a {
-    margin: 0 10px 0 10px;
-}
-
-.button {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    right: 108px;
-    top: 22px;
-}
-
-.button a {
-    text-decoration: none;
-}
-
-.button .login{
-    border-radius: 8px;
-    border: 1px solid #FF6347;
-    color: #FF6347;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding: 10px;
-    margin-right: 20px;
-}
-
-.account {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    top: 24px;
-    left: 1231px;
-}
-
-.account p {
-    cursor: pointer;
-    position: absolute;
-    top: -8px;
-    right: -100px;
-    color: #8B4513;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin: 1.4rem 0;
-}
-
-.account img {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    top: 0;
-    left: 129px;
-    border-radius: 45px;
-    object-fit: cover;
-}
-
-.login:hover, .login:focus {
-    background-color: #FF6347;
-    color: white;
-}
-
-.button .register{
-    border-radius: 8px;
-    background: #FF6347;
-    border: 1px solid #FF6347;
-    color: #FFF;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding: 10px;
-}
-
-.register:hover, .register:focus {
-    background-color: #d14f38;
-}
+  }
+  
+  .shopmenu {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      right: 326px;
+      top: 35px;
+  }
+  
+  .shopmenu a {
+      margin: 0 10px 0 10px;
+  }
+  
+  .button {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      right: 108px;
+      top: 22px;
+  }
+  
+  .button a {
+      text-decoration: none;
+  }
+  
+  .button .login{
+      border-radius: 8px;
+      border: 1px solid #FF6347;
+      color: #FF6347;
+      text-align: center;
+      font-family: "Poppins";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding: 10px;
+      margin-right: 20px;
+  }
+  
+  .account {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      top: 24px;
+      right: 20%;
+  }
+  
+  .account p {
+      cursor: pointer;
+      position: absolute;
+      top: -8px;
+      right: -100px;
+      color: #8B4513;
+      text-align: center;
+      font-family: "Poppins";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+  }
+  
+  .account img {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      top: 0;
+      left: 129px;
+      border-radius: 45px;
+      object-fit: cover;
+  }
+  
+  .login:hover, .login:focus {
+      background-color: #FF6347;
+      color: white;
+  }
+  
+  .button .register{
+      border-radius: 8px;
+      background: #FF6347;
+      border: 1px solid #FF6347;
+      color: #FFF;
+      text-align: center;
+      font-family: "Poppins";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding: 10px;
+  }
+  
+  .register:hover, .register:focus {
+      background-color: #d14f38;
+  }
 
 /* Navbar end */
 
@@ -706,7 +708,6 @@ p{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
   }
 
   .line{
@@ -729,12 +730,21 @@ p{
   }
 
   .identity{
-    align-items: baseline;
+    gap: 10px;
     color: #000000;
     display: flex;
     font-family: Poppins, 'Source Sans Pro';
     font-weight: 500;
+    white-space: nowrap;
+  }
 
+  .change{
+    gap: 10px;
+    justify-content: end;
+    color: #000000;
+    display: flex;
+    font-family: Poppins, 'Source Sans Pro';
+    font-weight: 500;
     white-space: nowrap;
   }
   
@@ -774,6 +784,11 @@ p{
     white-space: nowrap;
     width: 6.9rem;
   }
+
+  .utama-hidden, .atur-hidden, .hapus-hidden {
+    display: none;
+  }
+  
   .atur {
     align-items: center;
     border: solid 0.1rem rgba(0, 0, 0, 0.5);
@@ -788,6 +803,7 @@ p{
     text-align: center;
     white-space: nowrap;
     width: 180px;
+    text-decoration: none;
   }
   .ubah {
     color: #2252ff;
@@ -797,7 +813,7 @@ p{
     height: 32px;
     line-height: 1.5;
     white-space: nowrap;
-    width: 4.3rem;
+    text-decoration: none;
   }
   .hapus{
     color: #2252ff;
@@ -807,7 +823,7 @@ p{
     height: 32px;
     line-height: 1.5;
     white-space: nowrap;
-    width: 5.2rem;
+    text-decoration: none;
   }
 
   /* rawr kiri */

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="assets/patrobascld_blackwhite.svg">
-  <link rel="stylesheet" href="{{asset('css/alamat.css')}}">
+  <link rel="stylesheet" href="{{asset('css/profile.css')}}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -17,7 +17,7 @@
 <body>
 
   {{-- section1 --}}
-  <div class="boxx">
+    <div class="boxx">
         <div class="navigasi">
             <img class="profpic" src="assets/dummy.png"/>
             <h3>Username11</h3>
@@ -30,8 +30,8 @@
                                 <span class="title">Akun Saya</span>
                             </header>
                             <p class="description">
-                                <a class="acc" href="{{route('profile_data')}}">Profil</a>
-                                <a class="acc" id="active" href="">Alamat</a>
+                                <a class="acc" id="active" href="">Profil</a>
+                                <a class="acc" href="{{route('profile_alamat')}}">Alamat</a>
                             </p>
                         </div>
 
@@ -43,60 +43,79 @@
 
             </div>
         </div>
-        <div class="alamatbox">
+        <div class="databox">
             <div class="opsi1">
                 <div class="option">
-                    <h3>Alamat Saya</h3>
-                    <p>Kelola informasi alamat - alamat Anda</p>
-                </div>
-                <div class="option">
-                    <div class="tambah">+ Tambah Alamat</div>
+                    <h3>Profil saya</h3>
+                    <p>Kelola informasi profil Anda untuk mengontrol, melindungi, dan mengamankan akun</p>
                 </div>
             </div>
             <div class="line"></div>
-            <div class="opsi">
-                <div class="option">
-                    <div class="identity">
-                        <h4>Name111 </h4>
-                        <h4>(+62)8123456789</h4>
-                    </div>
-                    <p class="alamat">
-                        Jl. Mulyorejo Selatan II, No. 2, Surabaya
-                        <br />
-                        MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112
-                    </p>
-                    <div class="utama">Utama</div>
-                </div>
-                <div class="option">
-                    <div class="ubah">Ubah</div>
-                </div>
+            <form action="">
+              <div class="user">
+                <table>
+                  <tr>
+                      <td class="question"><label>Username</label></td>
+                      <td class="answer">
+                              <div class="uxYEXm">Username11</div>
+                          
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="question"><label>Nama</label></td>
+                      <td class="answer">
+                          <div class="in1">
+                              <input type="text" placeholder="" class="kotak" value="Nama11">
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="question"><label>Email</label></td>
+                      <td class="answer">
+                              <div class="uxYEXm">u**********@gmail.com</div>
+                              <button class="DJRxAF">ubah</button>
+                   
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="question"><label>Nomor Telepon</label></td>
+                      <td class="answer">
+                              <div class="uxYEXm">***********89</div>
+                              <button class="DJRxAF">ubah</button>
+                      </td>
+                  </tr>
+                  
+                  <tr>
+                      <td class="question"><label>Jenis Kelamin</label></td>
+                      <td class="answer">
+                        <div class="s4eg4A">
+                          <input type="radio" id="male" name="gender" checked>
+                          <label for="male">Laki-laki</label>
+                  
+                          <input type="radio" id="female" name="gender">
+                          <label for="female">Perempuan</label>
+                      </div>
+                      </td>
+                  </tr>
+                  
+                  <tr>
+                      <td class="question"><label></label></td>
+                      <td class="answer">
+                          <button type="button" class="btn btn-solid-primary btn--m btn--inline" aria-disabled="false">simpan</button>
+                      </td>
+                  </tr>
+              </table>
+
+              <div class="change">
+                <img class="profpic" src="assets/dummy.png" alt="Profile Picture">
+                <label for="file-input" class="pilih">Pilih Gambar</label>
+                <input id="file-input" class="file-input" type="file" accept="image/*" style="display: none;">
             </div>
-            <div class="line"></div>
-
-            <div class="opsi">
-                <div class="option">
-                    <div class="identity">
-                        <h4>Name111 </h4>
-                        <h4>(+62)8123456789</h4>
-                    </div>
-                    <p class="alamat">
-                        Jl. Mulyorejo Selatan II, No. 2, Surabaya
-                        <br />
-                        MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112
-                    </p>
-                </div>
-                <div class="option">
-                    <div class="identity">
-                        <div class="ubah">Ubah</div>
-                        <div class="hapus">Hapus</div>
-                    </div>
-                    <div class="atur">Atur sebagai utama</div>
-                </div>
-            </div>
-            <div class="line"></div>
-
-
+            
+            
+            </form>
         </div>
+      </div>
     </div>
 
   {{-- footer --}}
@@ -232,7 +251,7 @@
   </div>
 
   {{-- navbar --}}
-  <div class="navbar">
+  <nav class="navbar">
     <div class="logo">
       <h2>Local Step</h2>
     </div>
@@ -248,7 +267,7 @@
       </a>
     </div>
     <div class="menu">
-      <a href="">
+      <a href="{{route('mbrand')}}">
         Brand
       </a>
       <a href="">
@@ -263,7 +282,7 @@
         <img src="assets/dummy.png">
       </a>
     </div>
-  </div>
+  </nav>
 
   <script>
     const accordionContent = document.querySelectorAll(".accordion-content");

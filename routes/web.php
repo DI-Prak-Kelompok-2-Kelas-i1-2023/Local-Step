@@ -13,32 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+// Non Member
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home');
 })->name('home');
-
-Route::get('/home_in', function () {
-    return view('home_in');
-})->name('home_in');
 
 Route::get('/wishlist', function () {
     return view('wishlist');
 })->name('wishlist');
 
-Route::get('/profile_data', function () {
-    return view('profile_data');
-})->name('profile_data');
-
-Route::get('/profile_alamat', function () {
-    return view('profile_alamat');
-})->name('profile_alamat');
-
 Route::get('/product', function () {
-    return view('product');
+    return view('non/product');
 })->name('product');
 
 Route::get('/register', function () {
@@ -56,3 +42,40 @@ Route::get('/shop_home', function () {
 Route::get('/shop_product', function () {
     return view('shop_prod');
 })->name('shop_product');
+
+Route::get('/login', function () {
+    return view('index');
+})->name('index');
+
+Route::get('/brand', function () {
+    return view('non/brand');
+})->name('brand');
+
+// Member
+Route::get('mproduct', function () {
+    return view('memb/product');
+})->name('product');
+
+Route::get('/mbrand', function () {
+    return view('memb/brand');
+})->name('mbrand');
+
+Route::get('/member', function () {
+    return view('home_in');
+})->name('home_in');
+
+Route::get('/profile', function () {
+    return view('memb/profile_data');
+})->name('profile_data');
+
+Route::get('/adress', function () {
+    return view('memb/profile_alamat');
+})->name('profile_alamat');
+
+Route::get('/cart', function(){
+    return view('cart');
+})->name('cart');
+
+Route::Get('/checkout', function(){
+    return view('checkout');
+})->name('checkout');

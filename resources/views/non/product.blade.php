@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+    
 </head>
 
 <body>
@@ -87,14 +88,14 @@
                             <p>Cek kembali ukuranmu dengan melihat deskripsi!</p>
                         </div>
                         <div class="size">
-                            <button class="button-size">37</button>
-                            <button class="button-size">38</button>
-                            <button class="button-size">39</button>
-                            <button class="button-size">40</button>
-                            <button class="button-size">41</button>
-                            <button class="button-size">42</button>
-                            <button class="button-size">43</button>
-                            <button class="button-size">44</button>
+                            <button class="button-size" onclick="changeColor(this)">37</button>
+                            <button class="button-size" onclick="changeColor(this)">38</button>
+                            <button class="button-size" onclick="changeColor(this)">39</button>
+                            <button class="button-size" onclick="changeColor(this)">40</button>
+                            <button class="button-size" onclick="changeColor(this)">41</button>
+                            <button class="button-size" onclick="changeColor(this)">42</button>
+                            <button class="button-size" onclick="changeColor(this)">43</button>
+                            <button class="button-size" onclick="changeColor(this)">44</button>
                         </div>
                     </div>
                     <div class="tokowrap">
@@ -178,115 +179,169 @@
             </div>
         </div>
 
-        <div class="Rate">
-            <div class="rate-box">
-                <p class="dari-5-HWu">
-                    <span class="dari-5-HWu-sub-0">4.7 </span>
-                    <span class="dari-5-HWu-sub-1">dari</span>
-                    <span class="dari-5-HWu-sub-2"> 5</span>
-                </p>
-                <div class="rawr">
-                    <img class="star-1-agM" src="assets/saly.svg" />
-                    <img class="star-3-uyX" src="assets/saly.svg" />
-                    <img class="star-2-FXb" src="assets/saly.svg" />
-                    <img class="star-4-P81" src="assets/saly.svg" />
-                    <img class="star-5-KXT" src="assets/saly.svg" />
+        <h3>PENILAIAN PRODUK</h3>
+        <div class="ratebox">
+            <div class="rate">
+                <div class="rate-box">
+                    <div class="nilairate">
+                        <h3>4.7</h3>
+                        <h3><span>dari</span></h3>
+                        <H3>5</H3>
+                    </div>
+                    <div class="rawr">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="rate-menu">
+                    <div class="menu1">
+                        <div class="ratebtn1" onclick="changeColors(this)">Semua</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">5 Bintang</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">4 Bintang</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">3 Bintang</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">2 Bintang</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">1 Bintang</div>
+                        <div class="ratebtn1" onclick="changeColors(this)">Dengan Komentar</div>
+                        <div class="ratebtn1 clicked" onclick="changeColors(this)">Dengan Media</div>
+                    </div>
                 </div>
             </div>
-            <div class="rate-menu">
-                <div class="menu1">
-                    <div class="ratebtn1">Semua</div>
-                    <div class="ratebtn1">5 Bintang </div>
-                    <div class="ratebtn1">4 Bintang</div>
-                    <div class="ratebtn1">3 Bintang</div>
-                    <div class="ratebtn1">2 Bintang</div>
+
+            <div class="review">
+                <img src="assets/dummy.png" class="review-prof">
+                <div class="reviewdesc">
+                    <p>Username</p>
+                    <div class="starreview">
+                        <i class="fas fa-star" class="star"></i>
+                        <i class="fas fa-star" class="star"></i>
+                        <i class="fas fa-star" class="star"></i>
+                        <i class="fas fa-star" class="star"></i>
+                        <i class="fas fa-star" class="star"></i>
+                    </div>
+                    <p>2023-09-30 | Compass Gazelle, Blue Sky</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                        <br />
+                        Maecenas in magna sed lorem dignissim posuere. Nulla pulvinar efficitur mi,
+
+                        <br />
+                        vel interdum ligula feugiat dictum. Cras volutpat luctus felis ut ullamcorper.
+
+                    </p>
+                    <div class="photodetail">
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                    </div>
                 </div>
-                <div class="menu2">
-                    <div class="ratebtn1">1 Bintang</div>
-                    <div class="ratebtn1">Dengan Komentar</div>
-                    <div class="ratebtn2">Dengan Media</div>
+            </div>
+            <div class="review">
+                <img src="assets/dummy.png" class="review-prof">
+                <div class="reviewdesc">
+                    <p>Username</p>
+                    <div class="starreview">
+                        <i class="fas fa-star" class="stars"></i>
+                        <i class="fas fa-star" class="stars"></i>
+                        <i class="fas fa-star" class="stars"></i>
+                        <i class="fas fa-star" class="stars"></i>
+                        <i class="fas fa-star" class="stars"></i>
+                    </div>
+                    <p>2023-09-30 | Compass Gazelle, Blue Sky</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                        <br />
+                        Maecenas in magna sed lorem dignissim posuere. Nulla pulvinar efficitur mi,
+
+                        <br />
+                        vel interdum ligula feugiat dictum. Cras volutpat luctus felis ut ullamcorper.
+
+                    </p>
+                    <div class="photodetail">
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                        <img class="testi" src="assets/aerost_osaka.svg" />
+                    </div>
                 </div>
+            </div>
+
+            <div class="pagination">
+                <img class="arrow" src="assets/aerost_osaka.svg" />
+                <div class="page-active">
+                    <p>1</p>
+                </div>
+                <p class="page">2</p>
+                <p class="page">3</p>
+                <p class="page">4</p>
+                <p class="page">5</p>
+                <p class="page">...</p>
+                <img class="arrow" src="assets/aerost_osaka.svg" />
             </div>
         </div>
 
-        <div class="review">
-            <div class="review-prof"></div>
-            <div class="reviewdescz">
-                <p>Username</p>
-                <div class="group-2656-4o7">
-                    <img class="star-6-Qc5" src="assets/saly.svg" />
-                    <img class="star-8-A5T" src="assets/saly.svg" />
-                    <img class="star-7-V7j" src="assets/saly.svg" />
-                    <img class="star-9-1rm" src="assets/saly.svg" />
-                    <img class="star-10-yHo" src="assets/saly.svg" />
-                </div>
-                <p class="compass-gazelle-blue-sky-WoX">2023-09-30 | Compass Gazelle, Blue Sky</p>
-                <p
-                    class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-maecenas-in-magna-sed-lorem-dignissim-posuere-nulla-pulvinar-efficitur-mi-vel-interdum-ligula-feugiat-dictum-cras-volutpat-luctus-felis-ut-ullamcorper-qL1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-                    <br />
-                    Maecenas in magna sed lorem dignissim posuere. Nulla pulvinar efficitur mi,
-
-                    <br />
-                    vel interdum ligula feugiat dictum. Cras volutpat luctus felis ut ullamcorper.
-
-                </p>
-                <div class="group-2657-2QV">
-                    <img class="rectangle-252-k5b" src="assets/saly.svg" />
-                    <img class="rectangle-253-UnH" src="assets/saly.svg" />
-                    <img class="rectangle-254-Djs" src="assets/saly.svg" />
-                </div>
-            </div>
+    <h3>REKOMENDASI UNTUK ANDA</h3>
+    <div class="group">
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/aerost_osaka.svg" />
         </div>
-
-        <div class="review">
-            <div class="review-prof"></div>
-            <div class="frame-10-BzD">
-                <p class="username-jVw">Username</p>
-                <div class="group-2656-4o7">
-                    <img class="star-6-Qc5" src="assets/saly.svg" />
-                    <img class="star-8-A5T" src="assets/saly.svg" />
-                    <img class="star-7-V7j" src="assets/saly.svg" />
-                    <img class="star-9-1rm" src="assets/saly.svg" />
-                    <img class="star-10-yHo" src="assets/saly.svg" />
-                </div>
-                <p class="compass-gazelle-blue-sky-WoX">2023-09-30 | Compass Gazelle, Blue Sky</p>
-                <p
-                    class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-maecenas-in-magna-sed-lorem-dignissim-posuere-nulla-pulvinar-efficitur-mi-vel-interdum-ligula-feugiat-dictum-cras-volutpat-luctus-felis-ut-ullamcorper-qL1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-                    <br />
-                    Maecenas in magna sed lorem dignissim posuere. Nulla pulvinar efficitur mi,
-
-                    <br />
-                    vel interdum ligula feugiat dictum. Cras volutpat luctus felis ut ullamcorper.
-
-                </p>
-                <div class="group-2657-2QV">
-                    <img class="rectangle-252-k5b" src="assets/saly.svg" />
-                    <img class="rectangle-253-UnH" src="assets/saly.svg" />
-                    <img class="rectangle-254-Djs" src="assets/saly.svg" />
-                </div>
-            </div>
+        <div class="frame">
+          <div class="title">Aerostreet Osaka Krem Biru Hitam</div>
+          <div class="prod-desc">
+            <div class="price">Rp149.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
         </div>
-
-        <div class="group-2669-Tty">
-            <img class="vector-jbb" src="assets/saly.svg" />
-            <div class="auto-group-saud-fEM">
-                <div class="rectangle-241-CEH"></div>
-                <p class="item-1-8td">1</p>
-            </div>
-            <p class="item-2-1xR">2</p>
-            <p class="item-3-YBf">3</p>
-            <p class="item-4-g2y">4</p>
-            <p class="item-5-otH">5</p>
-            <p class="item--UDj">...</p>
-            <img class="vector-Bdw" src="assets/saly.svg" />
+      </div>
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/aerost_hoops.svg" />
         </div>
+        <div class="frame">
+          <div class="title">Aerostreet Hoops Low Merah Hitam</div>
+          <div class="prod-desc">
+            <div class="price">Rp149.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/bucch_faustus.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Buccheri Faustus Sneakers</div>
+          <div class="prod-desc">
+            <div class="price">Rp769.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
+      <div class="produk-pilihan">
+        <div class="rectangle">
+          <img src="assets/sepatu_sklh.svg" />
+        </div>
+        <div class="frame">
+          <div class="title">Sepatu Sekolah Bata</div>
+          <div class="prod-desc">
+            <div class="price">Rp249.900</div>
+            <img class="star" src="assets/star.svg" />
+            <div class="rating">4.7</div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    </div>
 
+    
 
     <div class="footer">
         <div class="footLine"></div>
@@ -419,7 +474,9 @@
         </div>
     </div>
 
-    <script> const imgs = document.querySelectorAll('.img-select a');
+    
+    <script>
+        const imgs = document.querySelectorAll('.img-select a');
         const imgBtns = [...imgs];
         let imgId = 1;
 
@@ -437,7 +494,35 @@
             document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
         }
 
-        window.addEventListener('resize', slideImage);</script>
+        window.addEventListener('resize', slideImage);
+
+    </script>
+
+    <script>
+        function changeColor(button) {
+            // Remove the 'clicked' class from all buttons
+            document.querySelectorAll('.button-size').forEach(function (btn) {
+                btn.classList.remove('clicked');
+            });
+
+            // Add the 'clicked' class to the clicked button
+            button.classList.add('clicked');
+        }
+    </script>
+
+    <script>
+        function changeColors(button) {
+            const menuButtons = button.parentNode.querySelectorAll('.ratebtn1');
+            menuButtons.forEach(function (btn) {
+                btn.classList.remove('clicked');
+            });
+
+            // Add the 'clicked' class to the clicked button
+            button.classList.add('clicked');
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/f75625c80a.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
