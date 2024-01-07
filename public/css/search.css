@@ -433,6 +433,10 @@ body {
     margin-top: 50px;
 }
 
+.cards-container a {
+    text-decoration: none;
+}
+
 .paginator {
     display: flex;
     justify-content: center;

@@ -14,32 +14,32 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <div class="navbar">
         <div class="logo">
-            <h2>Local Step</h2>
+          <h2>Local Step</h2>
         </div>
         <div class="search">
-            <a href="">
-                <img src="assets/search_btn.svg">
-            </a>
+          <a href="{{route('nonsearch')}}">
+            <img src="assets/search_btn.svg">
+          </a>
         </div>
         <div class="menu">
-            <a href="">
-                Brand
-            </a>
-            <a href="">
-                Kategori
-            </a>
+          <a href="{{route('nonbrand')}}">
+            Brand
+          </a>
+          <a href="">
+            Kategori
+          </a>
         </div>
         <div class="button">
-            <a class="login" href="index.html">
-                Masuk
-            </a>
-            <a class="register" href="">
-                Daftar
-            </a>
+          <a class="login" href="{{route('index')}}">
+            Masuk
+          </a>
+          <a class="register" href="{{route('register')}}">
+            Daftar
+          </a>
         </div>
-    </nav>
+      </div>
     <div class="wraps">
         <div class="card-wrapper">
             <div class="card">
@@ -109,7 +109,9 @@
                             <div class="tokodet">
                                 <img class="brandtoko" src="assets/saly.svg" />
                                 <h4 style="color: white;">Aerostreet Official</h4>
-                                <div class="kunjung">Kunjungi toko</div>
+                                <a href="{{route('nonshop_home')}}" style="text-decoration: none">
+                                    <div class="kunjung">Kunjungi toko</div>
+                                </a>
                             </div>
                         </div>
                         <div class="chatbutton">Chat Sekarang</div>

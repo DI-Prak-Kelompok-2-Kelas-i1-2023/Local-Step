@@ -38,21 +38,21 @@
         </p>
       </div>
       <h1>Daftar</h1>
-      <form action="{{route('home')}}">
+      <form action="{{route('mhome')}}">
         @csrf
         <div class="infield">
           <label>Enter your username or email address</label>
-          <input type="email" placeholder="Username or email address" id="Email" name="email"/>
+          <input type="email" placeholder="Username or email address" id="Email" name="email" required/>
         </div>
         <div class="infield2">
           <label class="label1" for="name">Name</label>
-          <input type="text" placeholder="Name" id="Name" name="name"/>
+          <input type="text" placeholder="Name" id="Name" name="name" required/>
           <label class="label2" for="contact">Contact Number</label>
-          <input type="number" placeholder="Contact Number" id="Contact" name="contact"/>
+          <input type="number" placeholder="Contact Number" id="Contact" name="contact" required/>
         </div>
         <div class="infield">
           <label>Enter your password</label>
-          <input type="password" placeholder="Password" id="Password" name="password"/>
+          <input type="password" placeholder="Password" id="Password" name="password" required/>
         </div>
         <button>Daftar</button>
       </form>

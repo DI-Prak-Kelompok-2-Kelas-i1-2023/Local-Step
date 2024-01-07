@@ -171,17 +171,17 @@
     </div>
   </div>
 
-  <nav class="navbar">
+  <div class="navbar">
     <div class="logo">
       <h2>Local Step</h2>
     </div>
     <div class="search">
-      <a href="">
+      <a href="{{route('nonsearch')}}">
         <img src="assets/search_btn.svg">
       </a>
     </div>
     <div class="menu">
-      <a href="">
+      <a href="{{route('nonbrand')}}">
         Brand
       </a>
       <a href="">
@@ -189,14 +189,14 @@
       </a>
     </div>
     <div class="button">
-      <a class="login" href="index.html">
+      <a class="login" href="{{route('index')}}">
         Masuk
       </a>
-      <a class="register" href="">
+      <a class="register" href="{{route('register')}}">
         Daftar
       </a>
     </div>
-  </nav>
+  </div>
 
   <script>
     // Sample array (replace this with your actual data)

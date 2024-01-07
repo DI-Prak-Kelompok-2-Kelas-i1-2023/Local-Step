@@ -44,7 +44,9 @@
 
     {{-- add chart button --}}
     <div class="btn">
-      <button class="add-chart">Add to chart</button>
+      <a href="{{route('nonproduct')}}">
+        <button class="add-chart">See Detail</button>
+      </a>
     </div>
 
     {{-- product image --}}
@@ -314,31 +316,25 @@
     <div class="logo">
       <h2>Local Step</h2>
     </div>
-    <div class="shopmenu">
-      <a href="{{route('search')}}">
+    <div class="search">
+      <a href="{{route('nonsearch')}}">
         <img src="assets/search_btn.svg">
-      </a>
-      <a href="{{route('wishlist')}}">
-        <img src="assets/cart.svg">
-      </a>
-      <a href="">
-        <img src="assets/wishlist.svg">
       </a>
     </div>
     <div class="menu">
-      <a href="">
+      <a href="{{route('nonbrand')}}">
         Brand
       </a>
       <a href="">
         Kategori
       </a>
     </div>
-    <div class="account">
-      <p>
-        Username1
-      </p>
-      <a class="img" href="{{route('profile_data')}}">
-        <img src="assets/dummy.png">
+    <div class="button">
+      <a class="login" href="{{route('index')}}">
+        Masuk
+      </a>
+      <a class="register" href="{{route('register')}}">
+        Daftar
       </a>
     </div>
   </div>

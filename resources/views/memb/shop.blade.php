@@ -22,8 +22,8 @@
       <img class="banner" src="assets/store_banner.png">
       <img class="pp" src="assets/store_pp.png">
       <div class="menushop">
-        <button><a href="{{route('shop_home')}}">Home</a></button>
-        <button><a href="{{route('shop_product')}}">Produk</a></button>
+        <button><a href="{{route('mshop_home')}}">Home</a></button>
+        <button><a href="{{route('mshop_product')}}">Produk</a></button>
       </div>
     </div>
     <div class="shopcontent">
@@ -342,23 +342,23 @@
   </div>
 
   {{-- navbar --}}
-  <div class="navbar">
+  <nav class="navbar">
     <div class="logo">
       <h2>Local Step</h2>
     </div>
     <div class="shopmenu">
-      <a href="">
+      <a href="{{route('msearch')}}">
         <img src="assets/search_btn.svg">
       </a>
-      <a href="{{route('wishlist')}}">
+      <a href="{{route('cart')}}">
         <img src="assets/cart.svg">
       </a>
-      <a href="">
+      <a href="{{route('wishlist')}}">
         <img src="assets/wishlist.svg">
       </a>
     </div>
     <div class="menu">
-      <a href="">
+      <a href="{{route('mbrand')}}">
         Brand
       </a>
       <a href="">
@@ -369,11 +369,11 @@
       <p>
         Username1
       </p>
-      <a class="img" href="">
+      <a class="img" href="{{route('profile_data')}}">
         <img src="assets/dummy.png">
       </a>
     </div>
-  </div>
+  </nav>
 
   <script src="{{asset('js/home.js')}}"></script>
   

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Homepage</title>
+        <title>Search</title>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -205,7 +205,7 @@
                         $stars = 4.7;
                     @endphp
                     @for ($i = 1; $i <= 12; $i++)
-                    <x-shoesCard :$title :$price :$stars/>
+                    <a href="{{route('nonproduct')}}"><x-shoesCard :$title :$price :$stars/></a>
                     @endfor
                 </div>
                 <div class="paginator">
@@ -357,22 +357,30 @@
         {{-- navbar --}}
         <div class="navbar">
             <div class="logo">
-                <h2>Local Step</h2>
-            </div>
-            <div class="menu">
-                <a href=""> Brand </a>
-                <a href=""> Kategori </a>
+              <h2>Local Step</h2>
             </div>
             <div class="search">
-                <a href="">
-                    <img src="assets/search_btn.svg" />
-                </a>
+              <a href="{{route('nonsearch')}}">
+                <img src="assets/search_btn.svg">
+              </a>
+            </div>
+            <div class="menu">
+              <a href="{{route('nonbrand')}}">
+                Brand
+              </a>
+              <a href="">
+                Kategori
+              </a>
             </div>
             <div class="button">
-                <a class="login" href="{{ route('index') }}"> Masuk </a>
-                <a class="register" href=""> Daftar </a>
+              <a class="login" href="{{route('index')}}">
+                Masuk
+              </a>
+              <a class="register" href="{{route('register')}}">
+                Daftar
+              </a>
             </div>
-        </div>
+          </div>
 
         <script src="{{ asset('js/home.js') }}"></script>
     </body>

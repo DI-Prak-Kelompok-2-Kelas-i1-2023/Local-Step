@@ -234,7 +234,7 @@
                         <div class="summary-price">Total Harga</div>
                         <div class="summary-disc">Total Diskon</div>
                         <div class="summary-total">Harga Akhir</div>
-                        <button class="summary-btn">Beli</button>
+                        <a href="{{route('checkout')}}"><button class="summary-btn">Beli</button><a>
                     </div>
                 </div>
             </div>
@@ -375,24 +375,38 @@
         </div>
 
         {{-- navbar --}}
-        <div class="navbar">
+        <nav class="navbar">
             <div class="logo">
-                <h2>Local Step</h2>
+              <h2>Local Step</h2>
             </div>
-            <div class="search">
-                <a href="">
-                    <img src="assets/search_btn.svg" />
-                </a>
+            <div class="shopmenu">
+              <a href="{{route('msearch')}}">
+                <img src="assets/search_btn.svg">
+              </a>
+              <a href="{{route('cart')}}">
+                <img src="assets/cart.svg">
+              </a>
+              <a href="{{route('wishlist')}}">
+                <img src="assets/wishlist.svg">
+              </a>
             </div>
             <div class="menu">
-                <a href=""> Brand </a>
-                <a href=""> Kategori </a>
+              <a href="{{route('mbrand')}}">
+                Brand
+              </a>
+              <a href="">
+                Kategori
+              </a>
             </div>
-            <div class="button">
-                <a class="login" href="{{ route('index') }}"> Masuk </a>
-                <a class="register" href=""> Daftar </a>
+            <div class="account">
+              <p>
+                Username1
+              </p>
+              <a class="img" href="{{route('profile_data')}}">
+                <img src="assets/dummy.png">
+              </a>
             </div>
-        </div>
+          </nav>
 
         <script src="{{ asset('js/home.js') }}"></script>
         <script>

@@ -44,7 +44,9 @@
 
     {{-- add chart button --}}
     <div class="btn">
-      <button class="add-chart">Add to chart</button>
+      <a href="{{route('mproduct')}}">
+        <button class="add-chart">See Product</button> 
+      </a>
     </div>
 
     {{-- product image --}}
@@ -310,32 +312,38 @@
   </div>
 
   {{-- navbar --}}
-  <div class="navbar">
+  <nav class="navbar">
     <div class="logo">
       <h2>Local Step</h2>
     </div>
-    <div class="search">
-      <a href="{{route('search')}}">
+    <div class="shopmenu">
+      <a href="{{route('msearch')}}">
         <img src="assets/search_btn.svg">
+      </a>
+      <a href="{{route('cart')}}">
+        <img src="assets/cart.svg">
+      </a>
+      <a href="{{route('wishlist')}}">
+        <img src="assets/wishlist.svg">
       </a>
     </div>
     <div class="menu">
-      <a href="">
+      <a href="{{route('mbrand')}}">
         Brand
       </a>
       <a href="">
         Kategori
       </a>
     </div>
-    <div class="button">
-      <a class="login" href="{{route('index')}}">
-        Masuk
-      </a>
-      <a class="register" href="{{route('register')}}">
-        Daftar
+    <div class="account">
+      <p>
+        Username1
+      </p>
+      <a class="img" href="{{route('profile_data')}}">
+        <img src="assets/dummy.png">
       </a>
     </div>
-  </div>
+  </nav>
 
   <script src="{{asset('js/home.js')}}"></script>
   

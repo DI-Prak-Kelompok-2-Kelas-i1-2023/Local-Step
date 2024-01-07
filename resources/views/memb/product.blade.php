@@ -14,18 +14,18 @@
 </head>
 
 <body>
-        <nav class="navbar">
+    <nav class="navbar">
         <div class="logo">
           <h2>Local Step</h2>
         </div>
         <div class="shopmenu">
-          <a href="">
+          <a href="{{route('msearch')}}">
             <img src="assets/search_btn.svg">
           </a>
-          <a href="{{route('wishlist')}}">
+          <a href="{{route('cart')}}">
             <img src="assets/cart.svg">
           </a>
-          <a href="">
+          <a href="{{route('wishlist')}}">
             <img src="assets/wishlist.svg">
           </a>
         </div>
@@ -41,11 +41,12 @@
           <p>
             Username1
           </p>
-          <a class="img" href="">
+          <a class="img" href="{{route('profile_data')}}">
             <img src="assets/dummy.png">
           </a>
         </div>
       </nav>
+
     <div class="wraps">
         <div class="card-wrapper">
             <div class="card">
@@ -115,7 +116,9 @@
                             <div class="tokodet">
                                 <img class="brandtoko" src="assets/saly.svg" />
                                 <h4 style="color: white;">Aerostreet Official</h4>
-                                <div class="kunjung">Kunjungi toko</div>
+                                <a href="{{route('mshop_home')}}" style="text-decoration: none">
+                                    <div class="kunjung">Kunjungi toko</div>
+                                </a>
                             </div>
                         </div>
                         <div class="chatbutton">Chat Sekarang</div>

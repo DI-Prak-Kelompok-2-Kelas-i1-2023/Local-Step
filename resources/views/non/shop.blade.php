@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Shop - Product</title>
+  <title>Shop - Home</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,19 +22,84 @@
       <img class="banner" src="assets/store_banner.png">
       <img class="pp" src="assets/store_pp.png">
       <div class="menushop">
-        <button><a href="{{route('shop_home')}}">Home</a></button>
-        <button><a href="{{route('shop_product')}}">Produk</a></button>
+        <button><a href="{{route('nonshop_home')}}">Home</a></button>
+        <button><a href="{{route('nonshop_product')}}">Produk</a></button>
       </div>
     </div>
-    <div class="shopproduct">
-      <div class="filter">
-        <div class="filtitle">
-          <img src="assets/filter.svg">
-          <h3>Filter</h3>
+    <div class="shopcontent">
+      <h3>Produk Baru</h3>
+      <div class="content1">
+        <div class="prodchoice">
+          <div class="rectangle">
+            <img src="assets/aerost_osaka.svg" />
+          </div>
+          <div class="frame">
+            <div class="title">Aerostreet Osaka Krem Biru Hitam</div>
+            <div class="prod-desc">
+              <div class="price">Rp149.900</div>
+              <img class="star" src="assets/star.svg" />
+              <div class="rating">4.7</div>
+            </div>
+          </div>
         </div>
-        <div class="filter1"></div>
+        <div class="prodchoice">
+          <div class="rectangle">
+            <img src="assets/aerost_hoops.svg" />
+          </div>
+          <div class="frame">
+            <div class="title">Aerostreet Hoops Low Merah Hitam</div>
+            <div class="prod-desc">
+              <div class="price">Rp149.900</div>
+              <img class="star" src="assets/star.svg" />
+              <div class="rating">4.7</div>
+            </div>
+          </div>
+        </div>
+        <div class="prodchoice">
+          <div class="rectangle">
+            <img src="assets/bucch_faustus.svg" />
+          </div>
+          <div class="frame">
+            <div class="title">Buccheri Faustus Sneakers</div>
+            <div class="prod-desc">
+              <div class="price">Rp769.900</div>
+              <img class="star" src="assets/star.svg" />
+              <div class="rating">4.7</div>
+            </div>
+          </div>
+        </div>
+        <div class="prodchoice">
+          <div class="rectangle">
+            <img src="assets/sepatu_sklh.svg" />
+          </div>
+          <div class="frame">
+            <div class="title">Sepatu Sekolah Bata</div>
+            <div class="prod-desc">
+              <div class="price">Rp249.900</div>
+              <img class="star" src="assets/star.svg" />
+              <div class="rating">4.7</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="prodlist">
+      <div class="content2">
+        <div class="abtshop">
+          <p>Tentang Toko</p>
+          <div class="abt">
+            <img src="assets/aboutshop.png">
+            <span>Bergaya dengan keanggunan khasnya, sepatu lokal "Aerostreet" adalah perwujudan sempurna dari kombinasi antara desain modern dan kualitas luar biasa, diciptakan oleh pengrajin lokal yang berbakat. Sepatu ini tidak hanya menawarkan penampilan yang menakjubkan, tetapi juga membawa sejumlah fitur yang membedakannya dari produk-produk sejenis.
+              <br>
+              <br>
+              Ikuti juga media sosial kami di:
+              <br>
+              Instagram: <a href="#">@aerostreet</a>
+              <br>
+              Twitter <a href="#">@aerostreet</a></span>
+          </div>
+        </div>
+      </div>
+      <h3>Produk Terlaris</h3>
+      <div class="content3">
         <div class="prodchoice">
           <div class="rectangle">
             <img src="assets/aerost_osaka.svg" />
@@ -139,61 +204,9 @@
             </div>
           </div>
         </div>
-        <div class="prodchoice">
-          <div class="rectangle">
-            <img src="assets/aerost_hoops.svg" />
-          </div>
-          <div class="frame">
-            <div class="title">Aerostreet Hoops Low Merah Hitam</div>
-            <div class="prod-desc">
-              <div class="price">Rp149.900</div>
-              <img class="star" src="assets/star.svg" />
-              <div class="rating">4.7</div>
-            </div>
-          </div>
-        </div>
-        <div class="prodchoice">
-          <div class="rectangle">
-            <img src="assets/aerost_osaka.svg" />
-          </div>
-          <div class="frame">
-            <div class="title">Aerostreet Osaka Krem Biru Hitam</div>
-            <div class="prod-desc">
-              <div class="price">Rp149.900</div>
-              <img class="star" src="assets/star.svg" />
-              <div class="rating">4.7</div>
-            </div>
-          </div>
-        </div>
-        <div class="prodchoice">
-          <div class="rectangle">
-            <img src="assets/bucch_faustus.svg" />
-          </div>
-          <div class="frame">
-            <div class="title">Buccheri Faustus Sneakers</div>
-            <div class="prod-desc">
-              <div class="price">Rp769.900</div>
-              <img class="star" src="assets/star.svg" />
-              <div class="rating">4.7</div>
-            </div>
-          </div>
-        </div>
-        <div class="prodchoice">
-          <div class="rectangle">
-            <img src="assets/aerost_hoops.svg" />
-          </div>
-          <div class="frame">
-            <div class="title">Aerostreet Hoops Low Merah Hitam</div>
-            <div class="prod-desc">
-              <div class="price">Rp149.900</div>
-              <img class="star" src="assets/star.svg" />
-              <div class="rating">4.7</div>
-            </div>
-          </div>
-        </div>
       </div>
+      <button class="showshopprod">Lihat Semua Produk</button>
     </div>
-    <div class="pagination"></div>
   </div>
 
   {{-- footer --}}
@@ -333,31 +346,25 @@
     <div class="logo">
       <h2>Local Step</h2>
     </div>
-    <div class="shopmenu">
-      <a href="">
+    <div class="search">
+      <a href="{{route('nonsearch')}}">
         <img src="assets/search_btn.svg">
-      </a>
-      <a href="{{route('wishlist')}}">
-        <img src="assets/cart.svg">
-      </a>
-      <a href="">
-        <img src="assets/wishlist.svg">
       </a>
     </div>
     <div class="menu">
-      <a href="">
+      <a href="{{route('nonbrand')}}">
         Brand
       </a>
       <a href="">
         Kategori
       </a>
     </div>
-    <div class="account">
-      <p>
-        Username1
-      </p>
-      <a class="img" href="">
-        <img src="assets/dummy.png">
+    <div class="button">
+      <a class="login" href="{{route('index')}}">
+        Masuk
+      </a>
+      <a class="register" href="{{route('register')}}">
+        Daftar
       </a>
     </div>
   </div>

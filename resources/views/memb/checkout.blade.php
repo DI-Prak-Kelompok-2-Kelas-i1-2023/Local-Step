@@ -432,9 +432,11 @@
                                         <div class="first-con">Perkiraan Sampai</div>
                                         <div class="sec-con">01 Feb, 2023</div>
                                     </div>
-                                    <div class="payment-btn">
-                                        Lanjutkan Pembayaran
-                                    </div>
+                                    <a href="{{route('payment')}}">
+                                        <button class="payment-btn">
+                                            Lanjutkan Pembayaran
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -578,32 +580,38 @@
         </div>
 
         {{-- navbar --}}
-        <div class="navbar">
+        <nav class="navbar">
             <div class="logo">
-                <h2>Local Step</h2>
+              <h2>Local Step</h2>
             </div>
             <div class="shopmenu">
-                <a href="">
-                    <img src="assets/search_btn.svg" />
-                </a>
-                <a href="{{ route('wishlist') }}">
-                    <img src="assets/cart.svg" />
-                </a>
-                <a href="">
-                    <img src="assets/wishlist.svg" />
-                </a>
+              <a href="{{route('msearch')}}">
+                <img src="assets/search_btn.svg">
+              </a>
+              <a href="{{route('cart')}}">
+                <img src="assets/cart.svg">
+              </a>
+              <a href="{{route('wishlist')}}">
+                <img src="assets/wishlist.svg">
+              </a>
             </div>
             <div class="menu">
-                <a href=""> Brand </a>
-                <a href=""> Kategori </a>
+              <a href="{{route('mbrand')}}">
+                Brand
+              </a>
+              <a href="">
+                Kategori
+              </a>
             </div>
             <div class="account">
-                <p>Username1</p>
-                <a class="img" href="">
-                    <img src="assets/dummy.png" />
-                </a>
+              <p>
+                Username1
+              </p>
+              <a class="img" href="{{route('profile_data')}}">
+                <img src="assets/dummy.png">
+              </a>
             </div>
-        </div>
+          </nav>
 
         <script src="{{ asset('js/home.js') }}"></script>
     </body>

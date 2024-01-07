@@ -38,15 +38,15 @@
         </p>
       </div>
       <h1>Masuk</h1>
-      <form action="{{route('home')}}">
+      <form action="{{route('mhome')}}">
         @csrf
         <div class="infield">
           <label>Enter your username or email address</label>
-          <input type="email" placeholder="Username or email address" id="Email" name="email"/>
+          <input type="email" placeholder="Username or email address" id="Email" name="email" required/>
         </div>
         <div class="infield">
           <label>Enter your password</label>
-          <input type="password" placeholder="Password" id="Password" name="password"/>
+          <input type="password" placeholder="Password" id="Password" name="password" required/>
         </div>
         <a href="#" class="forgot">Forgot Password</a>
         <button>Masuk</button>
@@ -61,7 +61,7 @@
           <img src="assets/fb.svg">
         </button>
         <button class="apple">
-          <a href="{{route('home_in')}}">
+          <a href="{{route('home')}}">
             <img src="assets/apple.svg">
           </a>
         </button>

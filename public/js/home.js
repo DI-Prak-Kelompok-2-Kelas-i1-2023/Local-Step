@@ -17,47 +17,108 @@ function openProduct(event, productId) {
 
 document.getElementById("defaultOpen").click();
 
-document.addEventListener('DOMContentLoaded', function () {
-  const prodList = document.querySelector('.prodlist');
-  const prodChoices = document.querySelectorAll('.prodchoice');
-  const itemsPerPage = 6;
-
-function showPage(pageNumber) {
-  const startIndex = (pageNumber - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-
-  prodChoices.forEach((choice, index) => {
-      choice.style.display = (index >= startIndex && index < endIndex) ? 'block' : 'none';
-  });
+function toggleSize(size) {
+  size.classList.toggle("active");
 }
-
-function setupPagination() {
-  const totalPages = Math.ceil(prodChoices.length / itemsPerPage);
-
-  const pagination = document.querySelector('.pagination');
-  for (let i = 1; i <= totalPages; i++) {
-      const pageLink = document.createElement('a');
-      pageLink.href = '#';
-      pageLink.textContent = i;
-      pagination.appendChild(pageLink);
-
-      pageLink.addEventListener('click', function (event) {
-          event.preventDefault();
-          const pageNumber = parseInt(event.target.textContent);
-          showPage(pageNumber);
-          updateActivePage(pageNumber);
-      });
+function controlFromInput(
+  fromSlider,
+  fromInput,
+  toInput,
+  controlSlider
+) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, "#C6C6C6", "#000", controlSlider);
+  if (from > to) {
+      fromSlider.value = to;
+      fromInput.value = to;
+  } else {
+      fromSlider.value = from;
   }
-
-  showPage(1);
-  updateActivePage(1);
 }
 
-function updateActivePage(pageNumber) {
-  const pageLinks = document.querySelectorAll('.pagination a');
-  pageLinks.forEach(link => link.classList.remove('active'));
-  pageLinks[pageNumber - 1].classList.add('active');
+function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, "#C6C6C6", "#000", controlSlider);
+  setToggleAccessible(toInput);
+  if (from <= to) {
+      toSlider.value = to;
+      toInput.value = to;
+  } else {
+      toInput.value = from;
+  }
 }
 
-setupPagination();
+function controlFromSlider(fromSlider, toSlider, fromInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, "#C6C6C6", "#000", toSlider);
+  if (from > to) {
+      fromSlider.value = to;
+      fromInput.value = to;
+  } else {
+      fromInput.value = from;
+  }
+}
+
+function controlToSlider(fromSlider, toSlider, toInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, "#C6C6C6", "#000", toSlider);
+  setToggleAccessible(toSlider);
+  if (from <= to) {
+      toSlider.value = to;
+      toInput.value = to;
+  } else {
+      toInput.value = from;
+      toSlider.value = from;
+  }
+}
+
+function getParsed(currentFrom, currentTo) {
+  const from = parseInt(currentFrom.value, 10);
+  const to = parseInt(currentTo.value, 10);
+  return [from, to];
+}
+
+function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+  const rangeDistance = to.max - to.min;
+  const fromPosition = from.value - to.min;
+  const toPosition = to.value - to.min;
+  controlSlider.style.background = `linear-gradient(
+to right,
+${sliderColor} 0%,
+${sliderColor} ${(fromPosition / rangeDistance) * 100}%,
+${rangeColor} ${(fromPosition / rangeDistance) * 100}%,
+${rangeColor} ${(toPosition / rangeDistance) * 100}%,
+${sliderColor} ${(toPosition / rangeDistance) * 100}%,
+${sliderColor} 100%)`;
+}
+
+function setToggleAccessible(currentTarget) {
+  const toSlider = document.querySelector("#endVal");
+  if (Number(currentTarget.value) <= 0) {
+      toSlider.style.zIndex = 2;
+  } else {
+      toSlider.style.zIndex = 0;
+  }
+}
+
+const fromSlider = document.querySelector("#startVal");
+const toSlider = document.querySelector("#endVal");
+const fromInput = document.querySelector("#startInput");
+const toInput = document.querySelector("#endInput");
+fillSlider(fromSlider, toSlider, "#C6C6C6", "#000", toSlider);
+setToggleAccessible(toSlider);
+
+fromSlider.oninput = () =>
+  controlFromSlider(fromSlider, toSlider, fromInput);
+toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+fromInput.oninput = () =>
+  controlFromInput(fromSlider, fromInput, toInput, toSlider);
+toInput.oninput = () =>
+  controlToInput(toSlider, fromInput, toInput, toSlider);
+
+const sizeBtn = document.querySelectorAll(".size");
+sizeBtn.forEach((ele) => {
+  ele.addEventListener("click", (e) => {
+      toggleSize(ele);
+  });
 });
