@@ -71,7 +71,7 @@
                   <a href="" class="ubah">Ubah</a>
                   <a href="" class="hapus-hidden">Hapus</a>
                 </div>
-                <a class="atur-hidden" onclick="toggleUtamaVisibility()">Atur sebagai utama</a>
+                <a class="atur-hidden" onclick="">Atur sebagai utama</a>
               </div>
             </div>
             <div class="line"></div>
@@ -304,20 +304,42 @@
 
 <script>
  function toggleUtamaVisibility() {
-  // Get all "Utama" and "Hapus" elements in both sets
-  const utamaElements = document.querySelectorAll('.utama, .utama-hidden');
-  const hapusElements = document.querySelectorAll('.hapus, .hapus-hidden');
+  // i want to make array for the data
 
-  // Toggle visibility for "Utama" elements
-  utamaElements.forEach(element => {
-    element.classList.toggle('utama-hidden');
+  // then put the data on the opsi class with the status of the hidden
+  // only one class is being the main one or utama
+
+  // then the rest is generated normally with having the atur sebagai utama
+
+
+  
+  }
+</script>
+
+{{-- Gambar --}}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Load stored profile picture data from localStorage
+    const storedImageData = localStorage.getItem('profilePicture');
+
+    if (storedImageData) {
+      // Update all elements with the class 'profpic' on Page B
+      updateAllProfpics(storedImageData);
+    }
   });
 
-  // Toggle visibility for "Hapus" elements
-  hapusElements.forEach(element => {
-    element.classList.toggle('hapus-hidden');
-  });
-}
+  function updateAllProfpics(imageData) {
+    const profpics = document.querySelectorAll('.profpic');
+    profpics.forEach((profpic) => {
+      profpic.src = imageData;
+    });
+
+    const accountImage = document.querySelector('.account img');
+    if (accountImage) {
+      accountImage.src = imageData;
+    }
+  }
+  
 </script>
   
 </body>

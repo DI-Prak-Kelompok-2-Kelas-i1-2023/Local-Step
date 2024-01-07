@@ -401,7 +401,6 @@
     width: 30%;
   }
     .profpic {
-      background-image: url('neg.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -418,9 +417,9 @@
       flex-shrink: 0;
       width: 100%;
     }
-  
+
     /* Accordion */
-  
+
     .acc {
         align-items: center;
         color: #8b4513;
@@ -434,7 +433,7 @@
         line-height: 1.5;
         white-space: nowrap;
         width: 100%;
-  
+
       }
       
       #active {
@@ -457,7 +456,7 @@
         white-space: nowrap;
         width: 100%;
     }
-  
+
     .accordion .accordion-content {
         margin: 10px 0;
         border-radius: 4px;
@@ -467,11 +466,11 @@
         display: flex;
         flex-direction: column;
     }
-  
+
     .accordion-content.open {
         padding-bottom: 10px;
     }
-  
+
     .accordion-content header {
         display: flex;
         min-height: 30px;
@@ -479,23 +478,24 @@
         cursor: pointer;
         transition: all 0.2s linear;
     }
-  
+
     .accordion-content.open header {
         min-height: 35px;
     }
-  
-    .accordion-content header .title {
+
+    .accordion .title {
         color: #8b4513;
         font-weight: 500;
         height: 30px;
+        font-size: 18px;
     }
-  
+
     .accordion-content .description {
         height: 0;
         padding: 0 15px;
         transition: all 0.2s linear;
     }
-  
+
     .accordion-content .description a{
         height: 0;
         color: #8b4513;
@@ -644,6 +644,32 @@
   display: none
 }
       
-  
+
+#verificationModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.close-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  color: #007BFF;
+  text-decoration: underline;
+}
+
   /* end */
       
