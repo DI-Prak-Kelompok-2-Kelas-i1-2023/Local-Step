@@ -50,55 +50,13 @@
                     <p>Kelola informasi alamat - alamat Anda</p>
                 </div>
                 <div class="option">
-                    <div class="tambah">+ Tambah Alamat</div>
+                  <button class="tambah" onclick="openModal()">+ Tambah Alamat</button>
                 </div>
             </div>
             <div class="line"></div>
-            <div class="opsi">
-              <div class="option">
-                <div class="identity">
-                  <h4>Name111 |</h4>
-                  <h4>(+62)8123456789</h4>
-                </div>
-                <p class="alamat">
-                  Jl. Mulyorejo Selatan II, No. 2, Surabaya
-                  MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112
-                </p>
-                <div class="utama">Utama</div>
-              </div>
-              <div class="option">
-                <div class="change">
-                  <a href="" class="ubah">Ubah</a>
-                  <a href="" class="hapus-hidden">Hapus</a>
-                </div>
-                <a class="atur-hidden" onclick="">Atur sebagai utama</a>
-              </div>
-            </div>
-            <div class="line"></div>
-
-            <div class="opsi">
-              <div class="option">
-                <div class="identity">
-                  <h4>Name111 |</h4>
-                  <h4>(+62)8123456789</h4>
-                </div>
-                <p class="alamat">
-                  Jl. Mulyorejo Selatan II, No. 2, Surabaya
-                  MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112
-                </p>
-                <div class="utama-hidden">Utama</div>
-              </div>
-              <div class="option">
-                <div class="change">
-                  <a href="" class="ubah">Ubah</a>
-                  <a href="" class="hapus">Hapus</a>
-                </div>
-                <a class="atur" onclick="toggleUtamaVisibility()">Atur sebagai utama</a>
-              </div>
-            </div>
-        
-          <div class="line"></div>    
-
+            <div id="data-container">
+              <!-- Dummy data will be dynamically inserted here -->
+          </div>
         </div>
     </div>
 
@@ -267,9 +225,9 @@
       </a>
     </div>
   </nav>
-  </nav>
 
-  <script>
+{{-- nav-side --}}
+<script>
     const accordionContent = document.querySelectorAll(".accordion-content");
 
     accordionContent.forEach((item, index) => {
@@ -302,20 +260,155 @@
     }
 </script>
 
+{{-- Alamat Baru --}}
 <script>
- function toggleUtamaVisibility() {
-  // i want to make array for the data
+  // Dummy data array
+  let dummyData = [
+      {
+          name: "Name111",
+          phoneNumber: "(+62)8123456789",
+          address: "Jl. Mulyorejo Selatan II, No. 2, Surabaya MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112"
+      },
+      {
+          name: "Name112",
+          phoneNumber: "(+62)8123456789",
+          address: "Jl. Mulyorejo Selatan II, No. 2, Surabaya MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112"
+      },
+      {
+          name: "Name113",
+          phoneNumber: "(+62)8123456789",
+          address: "Jl. Mulyorejo Selatan II, No. 2, Surabaya MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112"
+      },
+      // Add more objects as needed
+  ];
 
-  // then put the data on the opsi class with the status of the hidden
-  // only one class is being the main one or utama
+  // Function to create HTML elements based on the dummy data
+  function renderHTML(data) {
+      const dataContainer = document.getElementById('data-container');
 
-  // then the rest is generated normally with having the atur sebagai utama
+      // Clear existing content
+      dataContainer.innerHTML = '';
 
+      data.forEach((item, index) => {
+          const opsiDiv = document.createElement('div');
+          opsiDiv.classList.add('opsi');
 
-  
-  }
+          // Option 1: Identity, Alamat, Utama
+          const option1Div = document.createElement('div');
+          option1Div.classList.add('option');
+
+          const identityDiv = document.createElement('div');
+          identityDiv.classList.add('identity');
+
+          const nameH4 = document.createElement('h4');
+          nameH4.textContent = `${item.name} |`;
+
+          const phoneNumberH4 = document.createElement('h4');
+          phoneNumberH4.textContent = item.phoneNumber;
+
+          const addressP = document.createElement('p');
+          addressP.classList.add('alamat');
+          addressP.textContent = item.address;
+
+          const utamaDiv = document.createElement('div');
+          utamaDiv.classList.add(index === 0 ? 'utama' : 'utama-hidden');
+          utamaDiv.textContent = 'Utama';
+
+          identityDiv.appendChild(nameH4);
+          identityDiv.appendChild(phoneNumberH4);
+
+          option1Div.appendChild(identityDiv);
+          option1Div.appendChild(addressP);
+          option1Div.appendChild(utamaDiv);
+
+          // Append Option 1 to the opsiDiv
+          opsiDiv.appendChild(option1Div);
+
+          // Option 2: Change and Atur
+          const option2Div = document.createElement('div');
+          option2Div.classList.add('option');
+
+          const changeDiv = document.createElement('div');
+          changeDiv.classList.add('change');
+
+          const ubahLink = document.createElement('a');
+          ubahLink.href = '#';
+          ubahLink.classList.add('ubah');
+          ubahLink.textContent = 'Ubah';
+
+          const hapusLink = document.createElement('a');
+          hapusLink.href = '#';
+          hapusLink.classList.add(index === 0 ? 'hapus-hidden' : 'hapus');
+          hapusLink.textContent = 'Hapus';
+
+          changeDiv.appendChild(ubahLink);
+          changeDiv.appendChild(hapusLink);
+
+          const aturLink = document.createElement('a');
+          aturLink.href = '#';
+          aturLink.classList.add(index === 0 ? 'atur-hidden' : 'atur');
+          aturLink.textContent = 'Atur sebagai utama';
+          aturLink.dataset.index = index;
+
+          // Append Option 2 to the opsiDiv
+          option2Div.appendChild(changeDiv);
+          option2Div.appendChild(aturLink);
+
+          // Append Option 2 to the opsiDiv
+          opsiDiv.appendChild(option2Div);
+
+          // Append the opsiDiv to the dataContainer
+          dataContainer.appendChild(opsiDiv);
+
+          // Add a line separator between addresses, except for the last one
+          if (index < data.length - 1) {
+              const lineDiv = document.createElement('div');
+              lineDiv.classList.add('line');
+              dataContainer.appendChild(lineDiv);
+          }
+          // Attach event listeners to "Atur sebagai utama" links
+   
+        aturLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default behavior of the link
+            console.log('Clicked Index:', index);
+            toggleUtamaVisibility(index);
+        });
+    });
+}
+
+// Function to update HTML when "Atur sebagai utama" is clicked
+function toggleUtamaVisibility(index) {
+    console.log('Before Update:', dummyData);
+
+    // Check if the selected item is not already at the beginning
+    if (index !== 0) {
+        // Create a new array with the updated order
+        dummyData = [
+            dummyData[index],
+            ...dummyData.slice(0, index),
+            ...dummyData.slice(index + 1)
+        ];
+    } else {
+        // If the selected item is already at the beginning, no need to reorder
+        console.log('No need to reorder, already at the beginning.');
+    }
+
+    console.log('After Update:', dummyData);
+
+    // Update the DOM without refreshing the page
+    renderHTML(dummyData);
+}
+
+// Call the function to render initial HTML
+renderHTML(dummyData);
 </script>
 
+
+
+
+
+
+ 
 {{-- Gambar --}}
 <script>
   document.addEventListener('DOMContentLoaded', function () {

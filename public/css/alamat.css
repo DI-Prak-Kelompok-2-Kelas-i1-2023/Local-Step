@@ -947,3 +947,12 @@ p{
         align-items: center;
         justify-content: center;
     }
+
+    .modal {
+        display: none; /* Hide the modal by default */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Add other necessary styles */
+      }
