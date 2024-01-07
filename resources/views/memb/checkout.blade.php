@@ -37,7 +37,7 @@
                             data="{{ asset('assets/back-btn.svg') }}"
                             type=""
                         ></object>
-                        <h2>KEMBALI</h2>
+                        <a href="{{route('mproduct')}}" style="text-decoration: none"><h2>KEMBALI</h2></a>
                     </div>
                     <div class="payment-route">
                         <div class="route">PEMESANAN</div>

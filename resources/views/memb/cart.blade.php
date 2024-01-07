@@ -418,17 +418,17 @@
                 <ul>
                   <li>
                     <a href="{{route('profile_data')}}">
-                      <button>Edit Profile</button>
+                      <button>Edit Profil</button>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <button>About</button>
+                      <button>Pesanan Saya</button>
                     </a>
                   </li>
                   <li>
                     <a href="{{route('index')}}">
-                      <button>Logout</button>
+                      <button>Keluar</button>
                     </a>
                   </li>
                 </ul>

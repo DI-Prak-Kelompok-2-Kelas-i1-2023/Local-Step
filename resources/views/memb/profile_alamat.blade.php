@@ -287,6 +287,11 @@
             }
         })
     }
+
+    function menuToggle(){
+      const toggleMenu = document.querySelector('.profmenu');
+      toggleMenu.classList.toggle('active');
+    }
 </script>
 
 <div id="myModal" class="modal">

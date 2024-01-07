@@ -295,19 +295,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
 }
 
 .countdown {
     position: relative;
-    bottom: 285px;
 }
 
 .timer-bottombar {
     min-width: 3000px;
     height: 250px;
     background: rgba(139, 69, 19, 0.64);
-    bottom: 70px;
     z-index: 1;
+    margin-top: 150px;
 }
 
 .payment-select {

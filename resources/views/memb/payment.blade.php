@@ -38,7 +38,7 @@
                             data="{{ asset('assets/back-btn.svg') }}"
                             type=""
                         ></object>
-                        <h2>KEMBALI</h2>
+                        <a href="{{route('checkout')}}" style="text-decoration: none"><h2>KEMBALI</h2></a>
                     </div>
                     <div class="payment-route">
                         <div class="route">PEMESANAN</div>
@@ -74,12 +74,13 @@
                             <div class="timer-header">
                                 Segera Lakukan Pembayaran!
                             </div>
+                            <img src="">
                             <div class="timer">
                                 <object id="timer-svg" data="{{ asset('assets/timer.svg') }}" type=""></object>
-                                <div class="timer-bottombar"></div>
                                 <div class="countdown">
                                     <x-timer/>
                                 </div>
+                                <div class="timer-bottombar"></div>
                             </div>
 
                         </div>

@@ -246,7 +246,7 @@
         // Add a click event listener to the list item
         listItem.addEventListener('click', function () {
           // Handle list item click here, e.g., you can display an alert
-          window.location.href = 'pro.html'
+          window.location.href = 'nonshop_home'
         });
 
         // Append the list item to the list container

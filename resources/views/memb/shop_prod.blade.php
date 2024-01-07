@@ -191,7 +191,7 @@
       </div>
       </div>
       <div class="prodlist">
-        <div class="prodchoice" onclick="redirectToProductPage()">
+        <a class="prodchoice" href="{{route('mproduct')}}" style="text-decoration: none">
           <div class="rectangle">
             <img src="assets/aerost_osaka.svg" />
           </div>
@@ -203,8 +203,8 @@
               <div class="rating">4.7</div>
             </div>
           </div>
-        </div>
-        <div class="prodchoice" onclick="redirectToProductPage()">
+        </a>
+        <a class="prodchoice" href="{{route('mproduct')}}" style="text-decoration: none">
           <div class="rectangle">
             <img src="assets/aerost_hoops.svg" />
           </div>
@@ -216,8 +216,8 @@
               <div class="rating">4.7</div>
             </div>
           </div>
-        </div>
-        <div class="prodchoice" onclick="redirectToProductPage()">
+        </a>
+        <a class="prodchoice" href="{{route('mproduct')}}" style="text-decoration: none">
           <div class="rectangle">
             <img src="assets/bucch_faustus.svg" />
           </div>
@@ -229,8 +229,8 @@
               <div class="rating">4.7</div>
             </div>
           </div>
-        </div>
-        <div class="prodchoice" onclick="redirectToProductPage()">
+        </a>
+        <a class="prodchoice" href="{{route('mproduct')}}" style="text-decoration: none">
           <div class="rectangle">
             <img src="assets/sepatu_sklh.svg" />
           </div>
@@ -242,8 +242,8 @@
               <div class="rating">4.7</div>
             </div>
           </div>
-        </div>
-        <div class="prodchoice" onclick="redirectToProductPage()">
+        </a>
+        <a class="prodchoice" href="{{route('mproduct')}}" style="text-decoration: none">
           <div class="rectangle">
             <img src="assets/sepatu_sklh.svg" />
           </div>
@@ -255,7 +255,7 @@
               <div class="rating">4.7</div>
             </div>
           </div>
-        </div>
+        </a>
         <div class="prodchoice" onclick="redirectToProductPage()">
           <div class="rectangle">
             <img src="assets/bucch_faustus.svg" />
@@ -531,10 +531,6 @@
 </body>
 
 <script>
-function redirectToProductPage() {
-            window.location.href = 'product';
-        }
-
   function toggleSize(size) {
       size.classList.toggle("active");
   }

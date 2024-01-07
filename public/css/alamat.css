@@ -124,7 +124,7 @@
   .account p {
       cursor: pointer;
       position: absolute;
-      top: -8px;
+      top: 8px;
       right: -100px;
       color: #8B4513;
       text-align: center;
@@ -167,6 +167,86 @@
   .register:hover, .register:focus {
       background-color: #d14f38;
   }
+
+  .account .profmenu {
+    position: absolute;
+    top: 90px;
+    padding: 10px 20px;
+    background: #fff;
+    width: 200px;
+    box-sizing: 0 5px 25px #000000;
+    border-radius: 15px;
+    border: 1px grey solid;
+    transition: 0.5s;
+    visibility: hidden;
+    margin-left: 7.5em;
+    opacity: 0;
+}
+  
+.account .profmenu.active {
+    top: 60px;
+    visibility: visible;
+    opacity: 1;
+}
+  
+
+.account .profmenu .username {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin:  20px 0;
+}
+  
+.account .profmenu .username .name {
+    font-family: Roboto;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+  
+.account .profmenu span {
+    font-family: Roboto;
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+}
+  
+.account .profmenu ul li {
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+  
+.account .profmenu ul li img {
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+  
+.account .profmenu ul li:hover img {
+    opacity: 1;
+}
+  
+.account .profmenu ul li button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    border: 0;
+    background-color: transparent;
+    color: #000;
+    font-weight: 500;
+    transition: 0.5s;
+}
+  
+.account .profmenu ul li:hover button {
+    color: #000;
+    font-size: 16px;
+}
 
 /* Navbar end */
 
