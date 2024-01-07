@@ -12,37 +12,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body>
 
   {{-- section1 --}}
     <div class="boxx">
-        <div class="navigasi">
-            <img class="profpic" src="assets/dummy.png"/>
-            <h3>Username11</h3>
-            <p>Edit Profile</p>
-            <div class="nav-menu">
-                <div class="accord">
-                    <div class="accordion">
-                        <div class="accordion-content">
-                            <header>
-                                <span class="title">Akun Saya</span>
-                            </header>
-                            <p class="description">
-                                <a class="acc" id="active" href="">Profil</a>
-                                <a class="acc" href="{{route('profile_alamat')}}">Alamat</a>
-                            </p>
-                        </div>
-
-                        <span class="title">Pesanan Saya</span>
-
-
-                    </div>
-                </div>
-
+      <div class="navigasi">
+        <img class="profpic" src="assets/dummy.png"/>
+        <h3>Username11</h3>
+        <p>Edit Profile</p>
+        <div class="nav-menu">
+          <div class="accord">
+            <div class="accordion">
+              <div class="accordion-content">
+                <header><span class="title">Akun Saya</span></header>
+                 <p class="description">
+                    <a class="acc" id="active" href="">Profil</a>
+                    <a class="acc" href="{{route('profile_alamat')}}">Alamat</a>
+                 </p>
+              </div>
+              <span class="title">Pesanan Saya</span>
             </div>
+          </div>
         </div>
+      </div>
         <div class="databox">
             <div class="opsi1">
                 <div class="option">
@@ -51,7 +46,7 @@
                 </div>
             </div>
             <div class="line"></div>
-            <form action="">
+            <form action="" id="userInfoForm">
               <div class="user">
                 <table>
                   <tr>
@@ -70,19 +65,18 @@
                       </td>
                   </tr>
                   <tr>
-                      <td class="question"><label>Email</label></td>
-                      <td class="answer">
-                              <div class="uxYEXm">u**********@gmail.com</div>
-                              <button class="DJRxAF">ubah</button>
-                   
-                      </td>
+                    <td class="question"><label>Email</label></td>
+                    <td class="answer">
+                        <div id="emailDisplay" class="uxYEXm">re****@uner.com</div>
+                        <button id="verifyEmailButton" onclick="setVerificationTargetId('emailDisplay'); openVerificationModal('emailDisplay')">Ubah</button>
+                    </td>
                   </tr>
                   <tr>
-                      <td class="question"><label>Nomor Telepon</label></td>
-                      <td class="answer">
-                              <div class="uxYEXm">***********89</div>
-                              <button class="DJRxAF">ubah</button>
-                      </td>
+                    <td class="question"><label>Nomor Telepon</label></td>
+                    <td class="answer">
+                        <div id="phoneDisplay" class="uxYEXm">***********89</div>
+                        <button id="verifyPhoneButton" onclick="setVerificationTargetId('phoneDisplay'); openVerificationModal('phoneDisplay')">Ubah</button>
+                    </td>
                   </tr>
                   
                   <tr>
@@ -101,8 +95,8 @@
                   <tr>
                       <td class="question"><label></label></td>
                       <td class="answer">
-                          <button type="button" class="btn btn-solid-primary btn--m btn--inline" aria-disabled="false">simpan</button>
-                      </td>
+                        <button id="simpanButton" type="button" class="btn btn-solid-primary btn--m btn--inline" aria-disabled="false" onclick="onSaveButtonClick()">simpan</button>
+                    </td>
                   </tr>
               </table>
 
@@ -312,6 +306,219 @@
     </div>
   </nav>
 
+  <div id="verificationModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+    <div class="modal-content" style="background-color: #fff; padding: 20px; border-radius: 8px;">
+        <p>Enter Verification Code:</p>
+        <input type="text" id="verificationCode" placeholder="Verification Code">
+        <button onclick="verifyCode()">Verify</button>
+        <div class="close-btn" onclick="closeVerificationModal()">Close</div>
+    </div>
+</div>
+</div>
+
+{{-- Form Edit Profil --}}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  // Load the stored data and update the display
+  loadStoredData();
+
+  // Add event listener to the "simpan" button
+  document.getElementById('simpanButton').addEventListener('click', onSaveButtonClick);
+
+  // Load the verification modal state
+  const isVerificationModalOpen = localStorage.getItem('isVerificationModalOpen') === 'true';
+
+  // Set the initial state of the modal
+  if (isVerificationModalOpen) {
+    const verificationTargetId = localStorage.getItem('verificationTargetId');
+    openVerificationModal(verificationTargetId);
+  }
+  });
+
+ // Function to handle "Simpan" button click
+ function onSaveButtonClick() {
+    // Gather values from the form fields
+    const username = document.querySelector('.uxYEXm').textContent;
+    const nama = document.querySelector('.in1 input').value;
+    const email = document.getElementById('emailDisplay').textContent;
+    const phone = document.getElementById('phoneDisplay').textContent;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+
+    // Store the values in localStorage
+    localStorage.setItem('userData', JSON.stringify({ username, nama, email, phone, gender }));
+
+    // Update the display
+    loadStoredData();
+
+    // Optionally, you can display a success message or perform other actions
+    alert('Data saved successfully!');
+  }
+  // Function to load stored data and update the display
+  // Function to load stored data and update the display
+  function loadStoredData() {
+    const storedData = localStorage.getItem('userData');
+    if (storedData) {
+      const userData = JSON.parse(storedData);
+
+      // Update the display elements
+      document.querySelector('.uxYEXm').textContent = userData.username;
+      document.querySelector('.in1 input').value = userData.nama;
+
+      // Display masked email (replace with asterisks)
+      const maskedEmail = maskEmail(userData.email);
+      document.getElementById('emailDisplay').textContent = maskedEmail;
+
+      // Display masked phone number (replace with asterisks)
+      const maskedPhone = maskPhoneNumber(userData.phone);
+      document.getElementById('phoneDisplay').textContent = maskedPhone;
+
+      // Check the gender radio button
+      const genderRadioButtons = document.querySelectorAll('input[name="gender"]');
+      genderRadioButtons.forEach((radioButton) => {
+        if (radioButton.value === userData.gender) {
+          radioButton.checked = true;
+        } else {
+          radioButton.checked = false;
+        }
+      });
+    }
+  }
+
+  // Function to mask email with asterisks
+  function maskEmail(email) {
+    const atIndex = email.indexOf('@');
+    const maskedEmail = email.replace(/./g, (char, index) => {
+      if (index < atIndex - 4 || index >= atIndex) {
+        return char; // Keep characters before the specified number before '@' and after '@' as is
+      } else {
+        return '*'; // Mask characters within the specified range before '@'
+      }
+    });
+    return maskedEmail;
+  }
+
+  // Function to mask phone number with asterisks
+  function maskPhoneNumber(phone) {
+    const visibleDigits = 4; // Number of visible digits at the end
+    const maskedPhone = '*'.repeat(phone.length - visibleDigits) + phone.slice(-visibleDigits);
+    return maskedPhone;
+  }
+
+
+
+
+  // Function to open the verification modal with a target ID
+  function openVerificationModal(targetId) {
+    document.getElementById('verificationModal').style.display = 'flex';
+    // Save the modal state and target ID to localStorage
+    localStorage.setItem('isVerificationModalOpen', 'true');
+    localStorage.setItem('verificationTargetId', targetId);
+  }
+
+  // Function to close the verification modal
+  function closeVerificationModal() {
+    document.getElementById('verificationModal').style.display = 'none';
+    // Save the modal state to localStorage
+    localStorage.setItem('isVerificationModalOpen', 'false');
+  }
+
+  // Function to verify the code and update the target element
+  function verifyCode() {
+    const enteredCode = document.getElementById('verificationCode').value;
+    const storedCode = '123456'; // Replace with your actual verification code
+
+    if (enteredCode === storedCode) {
+      // Code is correct, prompt for new data using SweetAlert
+      Swal.fire({
+        title: 'Enter New Data',
+        input: 'text',
+        showCancelButton: true,
+        confirmButtonText: 'Update',
+        cancelButtonText: 'Cancel',
+        preConfirm: (newData) => {
+          if (!newData) {
+            Swal.showValidationMessage('Please enter new data');
+          }
+          return newData;
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Perform the desired action with the new data
+          const newData = result.value;
+          // Use localStorage to get the target ID
+          const targetId = localStorage.getItem('verificationTargetId');
+          document.getElementById(targetId).textContent = newData;
+          closeVerificationModal();
+        }
+      });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Verification Code',
+        text: 'Please try again.',
+      });
+    }
+  }
+
+  // Function to set the target ID before opening the modal
+  function setVerificationTargetId(targetId) {
+    localStorage.setItem('verificationTargetId', targetId);
+  }
+</script>
+
+{{-- Gambar --}}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const fileInput = document.getElementById('file-input');
+  fileInput.addEventListener('change', handleFileInputChange);
+
+  // Load stored profile picture data
+  loadStoredProfilePicture();
+});
+
+function handleFileInputChange(event) {
+  const fileInput = event.target;
+
+  if (fileInput.files && fileInput.files[0]) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      const imageData = e.target.result;
+
+      // Save the image data in localStorage
+      localStorage.setItem('profilePicture', imageData);
+
+      // Update all elements with the class 'profpic'
+      updateAllProfpics(imageData);
+    };
+
+    reader.readAsDataURL(fileInput.files[0]);
+  }
+}
+
+function loadStoredProfilePicture() {
+  const storedImageData = localStorage.getItem('profilePicture');
+  if (storedImageData) {
+    // Update all elements with the class 'profpic'
+    updateAllProfpics(storedImageData);
+  }
+}
+
+function updateAllProfpics(imageData) {
+  const profpics = document.querySelectorAll('.profpic');
+  profpics.forEach((profpic) => {
+    profpic.src = imageData;
+  });
+
+  const accountImage = document.querySelector('.account img');
+  if (accountImage) {
+    accountImage.src = imageData;
+  }
+}
+
+</script>
+
+{{-- Navigasi sidebar --}}
   <script>
     const accordionContent = document.querySelectorAll(".accordion-content");
 

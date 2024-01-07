@@ -100,14 +100,14 @@
                     </div>
                     <div class="tokowrap">
                         <div class="masukkan">
-                            <div class="cartbutton">Masukkan ke Keranjang</div>
-                            <a href="">
-                                <img src="assets/cart.svg">
-                            </a>
-                        </div>
+                            <div class="cartbutton" onclick="toggleCartWishlist()">Masukkan ke Keranjang</div>
+                            <button class="favorite-button" onclick="toggleFavorite()">
+                                <img id="favorite-icon" src="assets/heart-empty.svg" alt="Favorite Icon">
+                              </button>
+                          </div>
                         <div class="toko">
                             <div class="tokodet">
-                                <img class="brandtoko" src="assets/saly.svg" />
+                                <img class="brandtoko" src="assets/store_pp.png" />
                                 <h4 style="color: white;">Aerostreet Official</h4>
                                 <a href="{{route('nonshop_home')}}" style="text-decoration: none">
                                     <div class="kunjung">Kunjungi toko</div>
@@ -481,6 +481,22 @@
         const imgs = document.querySelectorAll('.img-select a');
         const imgBtns = [...imgs];
         let imgId = 1;
+
+        let isFavorite = false;
+
+        function toggleFavorite() {
+        const favoriteIcon = document.getElementById('favorite-icon');
+
+        if (isFavorite) {
+            // Toggle to empty heart
+            favoriteIcon.src = 'assets/heart-empty.svg'; // Replace with your empty heart icon
+        } else {
+            // Toggle to filled heart
+            favoriteIcon.src = 'assets/heart-filled.svg'; // Replace with your filled heart icon
+        }
+
+        isFavorite = !isFavorite;
+        }
 
         imgBtns.forEach((imgItem) => {
             imgItem.addEventListener('click', (event) => {
