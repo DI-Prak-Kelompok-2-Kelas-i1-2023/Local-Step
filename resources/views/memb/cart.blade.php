@@ -400,11 +400,39 @@
             </div>
             <div class="account">
               <p>
-                Username1
+                Username11
               </p>
-              <a class="img" href="{{route('profile_data')}}">
+              <a class="img" onclick="menuToggle()">
                 <img src="assets/dummy.png">
               </a>
+              <div class="profmenu">
+                <div class="username">
+                  <span class="name">
+                    Username11
+                  </span>
+                  <br>
+                  <span>
+                    username11@uner.com
+                  </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="{{route('profile_data')}}">
+                      <button>Edit Profile</button>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <button>About</button>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{route('index')}}">
+                      <button>Logout</button>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </nav>
 
@@ -435,6 +463,11 @@
 
             function substractQty(initialVal, value) {
                 return initialVal > 0 ? parseInt(initialVal) - value : 0;
+            }
+
+            function menuToggle(){
+                const toggleMenu = document.querySelector('.profmenu');
+                toggleMenu.classList.toggle('active');
             }
         </script>
     </body>

@@ -260,14 +260,42 @@
     </div>
     <div class="account">
       <p>
-        Username1
+        Username11
       </p>
-      <a class="img" href="{{route('profile_data')}}">
+      <a class="img" onclick="menuToggle()">
         <img src="assets/dummy.png">
       </a>
+      <div class="profmenu">
+        <div class="username">
+          <span class="name">
+            Username11
+          </span>
+          <br>
+          <span>
+            username11@uner.com
+          </span>
+        </div>
+        <ul>
+          <li>
+            <a href="{{route('profile_data')}}">
+              <button>Edit Profil</button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <button>Pesanan Saya</button>
+            </a>
+          </li>
+          <li>
+            <a href="{{route('index')}}">
+              <button>Keluar</button>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-  </nav>
+
 
   <script>
     const accordionContent = document.querySelectorAll(".accordion-content");
