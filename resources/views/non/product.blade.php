@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     
 </head>
 
@@ -100,11 +101,11 @@
                     </div>
                     <div class="tokowrap">
                         <div class="masukkan">
-                            <div class="cartbutton" onclick="toggleCartWishlist()">Masukkan ke Keranjang</div>
-                            <button class="favorite-button" onclick="toggleFavorite()">
-                                <img id="favorite-icon" src="assets/heart-empty.svg" alt="Favorite Icon">
-                              </button>
-                          </div>
+                            <div class="cartbutton" onclick="addToCart()">Masukkan ke Keranjang</div>
+                            <button class="wishlist" onclick="addToWishlist()">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
                         <div class="toko">
                             <div class="tokodet">
                                 <img class="brandtoko" src="assets/store_pp.png" />
@@ -271,17 +272,14 @@
                 </div>
             </div>
 
-            <div class="pagination">
-                <img class="arrow" src="assets/aerost_osaka.svg" />
-                <div class="page-active">
-                    <p>1</p>
+            <div class="paginator">
+                <iconify-icon icon="material-symbols:arrow-back-ios" style="color: black;"></iconify-icon>
+                @for ($i = 1; $i <= 5; $i++ )
+                <div class="page">
+                    {{ $i }}
                 </div>
-                <p class="page">2</p>
-                <p class="page">3</p>
-                <p class="page">4</p>
-                <p class="page">5</p>
-                <p class="page">...</p>
-                <img class="arrow" src="assets/aerost_osaka.svg" />
+                @endfor
+                <iconify-icon icon="material-symbols:arrow-forward-ios" style="color: black;"></iconify-icon>
             </div>
         </div>
 
@@ -476,27 +474,27 @@
         </div>
     </div>
 
+    <script>
+        function addToCart() {
+          // Add your logic for adding to the cart here
+    
+          // Navigate to the cart page
+          window.location.href = 'login'; // Replace '/cart' with your actual cart page URL
+        }
+    
+        function addToWishlist() {
+          // Add your logic for adding to the wishlist here
+    
+          // Navigate to the wishlist page
+          window.location.href = 'login'; // Replace '/wishlist' with your actual wishlist page URL
+        }
+      </script>
+
     
     <script>
         const imgs = document.querySelectorAll('.img-select a');
         const imgBtns = [...imgs];
         let imgId = 1;
-
-        let isFavorite = false;
-
-        function toggleFavorite() {
-        const favoriteIcon = document.getElementById('favorite-icon');
-
-        if (isFavorite) {
-            // Toggle to empty heart
-            favoriteIcon.src = 'assets/heart-empty.svg'; // Replace with your empty heart icon
-        } else {
-            // Toggle to filled heart
-            favoriteIcon.src = 'assets/heart-filled.svg'; // Replace with your filled heart icon
-        }
-
-        isFavorite = !isFavorite;
-        }
 
         imgBtns.forEach((imgItem) => {
             imgItem.addEventListener('click', (event) => {

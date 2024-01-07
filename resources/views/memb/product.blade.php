@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" />
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 
 <body>
@@ -107,10 +108,10 @@
                     </div>
                     <div class="tokowrap">
                         <div class="masukkan">
-                            <div class="cartbutton">Masukkan ke Keranjang</div>
-                            <a href="">
-                                <img src="assets/cart.svg">
-                            </a>
+                            <div class="cartbutton" onclick="showConfirmation()">Masukkan ke Keranjang</div>
+                            <button class="wishlist" onclick="toggleFavorite()">
+                                <i class="far fa-heart"></i>
+                              </button>
                         </div>
                         <div class="toko">
                             <div class="tokodet">
@@ -278,17 +279,14 @@
                 </div>
             </div>
 
-            <div class="pagination">
-                <img class="arrow" src="assets/aerost_osaka.svg" />
-                <div class="page-active">
-                    <p>1</p>
+            <div class="paginator">
+                <iconify-icon icon="material-symbols:arrow-back-ios" style="color: black;"></iconify-icon>
+                @for ($i = 1; $i <= 5; $i++ )
+                <div class="page">
+                    {{ $i }}
                 </div>
-                <p class="page">2</p>
-                <p class="page">3</p>
-                <p class="page">4</p>
-                <p class="page">5</p>
-                <p class="page">...</p>
-                <img class="arrow" src="assets/aerost_osaka.svg" />
+                @endfor
+                <iconify-icon icon="material-symbols:arrow-forward-ios" style="color: black;"></iconify-icon>
             </div>
         </div>
 
@@ -483,6 +481,52 @@
         </div>
     </div>
 
+    <div class="overlay" id="overlay">
+        <div class="popup">
+          <p>Are you sure you want to add to the cart?</p>
+          <button class="confirm-button" onclick="addToCart()">Yes, add to cart</button>
+          <button class="cancel-button" onclick="hideConfirmation()">Cancel</button>
+        </div>
+      </div>
+
+
+    <script>
+        function showConfirmation() {
+          const overlay = document.getElementById('overlay');
+          overlay.style.display = 'flex';
+        }
+    
+        function hideConfirmation() {
+          const overlay = document.getElementById('overlay');
+          overlay.style.display = 'none';
+        }
+    
+        function addToCart() {
+          hideConfirmation();
+          // Add your logic to add to the cart here
+          alert('Item added to the cart!');
+        }
+      </script>
+
+<script>
+       let isFavorite = false;
+
+function toggleFavorite() {
+  const iconElement = document.querySelector('.wishlist i');
+
+  if (isFavorite) {
+    // Toggle to empty heart
+    iconElement.classList.remove('far');
+    iconElement.classList.add('fas');
+  } else {
+    // Toggle to filled heart
+    iconElement.classList.remove('fas');
+    iconElement.classList.add('far');
+  }
+
+  isFavorite = !isFavorite;
+}
+      </script>
     
     <script>
         const imgs = document.querySelectorAll('.img-select a');
