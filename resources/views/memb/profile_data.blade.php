@@ -67,7 +67,7 @@
                   <tr>
                     <td class="question"><label>Email</label></td>
                     <td class="answer">
-                        <div id="emailDisplay" class="uxYEXm">u**********@gmail.com</div>
+                        <div id="emailDisplay" class="uxYEXm">re****@uner.com</div>
                         <button id="verifyEmailButton" onclick="setVerificationTargetId('emailDisplay'); openVerificationModal('emailDisplay')">Ubah</button>
                     </td>
                   </tr>
@@ -438,9 +438,8 @@
   }
 </script>
 
+{{-- Gambar --}}
 <script>
-  // profilePicture.js
-
 document.addEventListener('DOMContentLoaded', function () {
   const fileInput = document.getElementById('file-input');
   fileInput.addEventListener('change', handleFileInputChange);

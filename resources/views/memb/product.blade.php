@@ -114,7 +114,7 @@
                         </div>
                         <div class="toko">
                             <div class="tokodet">
-                                <img class="brandtoko" src="assets/saly.svg" />
+                                <img class="brandtoko" src="assets/store_pp.png" />
                                 <h4 style="color: white;">Aerostreet Official</h4>
                                 <a href="{{route('mshop_home')}}" style="text-decoration: none">
                                     <div class="kunjung">Kunjungi toko</div>

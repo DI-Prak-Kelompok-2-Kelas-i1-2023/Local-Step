@@ -260,27 +260,81 @@
     }
 </script>
 
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <!-- Your input fields for the new data -->
+    <label for="newName">Name:</label>
+    <input type="text" id="newName" name="newName">
+
+    <label for="newPhoneNumber">Phone Number:</label>
+    <input type="text" id="newPhoneNumber" name="newPhoneNumber">
+
+    <label for="newAddress">Address:</label>
+    <input type="text" id="newAddress" name="newAddress">
+
+    <button onclick="addNewData()">Add New Data</button>
+  </div>
+</div>
+
+
 {{-- Alamat Baru --}}
 <script>
   // Dummy data array
   let dummyData = [
       {
-          name: "Name111",
+          name: "Rosyidah",
           phoneNumber: "(+62)8123456789",
           address: "Jl. Mulyorejo Selatan II, No. 2, Surabaya MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112"
       },
       {
-          name: "Name112",
-          phoneNumber: "(+62)8123456789",
-          address: "Jl. Mulyorejo Selatan II, No. 2, Surabaya MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112"
-      },
-      {
-          name: "Name113",
+          name: "Samsudin",
           phoneNumber: "(+62)8123456789",
           address: "Jl. Mulyorejo Selatan II, No. 2, Surabaya MULYOREJO, SURABAYA, JAWA TIMUR, ID, 60112"
       },
       // Add more objects as needed
   ];
+
+  // Function to open the modal
+  function openModal() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'block';
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  }
+
+  // Function to add new data to dummyData
+  function addNewData() {
+    const newName = document.getElementById('newName').value;
+    const newPhoneNumber = document.getElementById('newPhoneNumber').value;
+    const newAddress = document.getElementById('newAddress').value;
+
+    // Check if all input fields are filled
+    if (newName && newPhoneNumber && newAddress) {
+      // Create a new data object
+      const newData = {
+        name: newName,
+        phoneNumber: newPhoneNumber,
+        address: newAddress,
+      };
+
+      // Add the new data to the beginning of the dummyData array
+      dummyData.unshift(newData);
+
+      // Close the modal
+      closeModal();
+
+      // Update the HTML to reflect the changes
+      renderHTML(dummyData);
+    } else {
+      alert('Please fill in all fields.');
+    }
+  }
+
 
   // Function to create HTML elements based on the dummy data
   function renderHTML(data) {
